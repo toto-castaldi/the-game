@@ -1,10 +1,15 @@
+//getRandomInt(3) 0,1,2
+const getRandomInt = (max) => {
+    return Math.floor(Math.random() * Math.floor(max));
+}
+
 const gameOptions = {
-    issaSpeedX : 5,
-    issaSpeedY : 5,
-    bulletSpeedX : 10,
-    bulletSpeedY : 10,
-    bulletCount : 10,
-    minMillisTimeDeltaFire : 200
+    issaSpeedX: 5,
+    issaSpeedY: 5,
+    bulletSpeedX: 20,
+    bulletSpeedY: 20,
+    bulletCount: 5,
+    minMillisTimeDeltaFire: 100
 }
 
 const game = new Phaser.Game({
@@ -13,5 +18,5 @@ const game = new Phaser.Game({
     width: 800,
     height: 600,
     scene: [Commands],
-    parent : "the-game"
+    parent: "the-game"
 });

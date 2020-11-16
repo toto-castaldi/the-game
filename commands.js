@@ -59,18 +59,28 @@ class Commands extends Phaser.Scene {
         if (this.dKey.isDown) {
             this.isaac.x += gameOptions.issaSpeedY
         }
-        if (this.leftKey.isDown) {
-            this.fire(-gameOptions.bulletSpeedX, 0, time);
+
+        const fireChecks = [0, 1, 2, 3];
+        while (fireChecks.length > 0) {
+            const index = getRandomInt(fireChecks.length);
+            const value = fireChecks[index];
+            fireChecks.splice(index, 1);
+
+            if (value === 0 && this.leftKey.isDown) {
+                this.fire(-gameOptions.bulletSpeedX, 0, time);
+            }
+            if (value === 1 && this.rightKey.isDown) {
+                this.fire(gameOptions.bulletSpeedX, 0, time);
+            }
+            if (value === 2 && this.upKey.isDown) {
+                this.fire(0, -gameOptions.bulletSpeedY, time);
+            }
+            if (value === 3 && this.downKey.isDown) {
+                this.fire(0, +gameOptions.bulletSpeedY, time);
+            }
         }
-        if (this.rightKey.isDown) {
-            this.fire(gameOptions.bulletSpeedX, 0, time);
-        }
-        if (this.upKey.isDown) {
-            this.fire(0, -gameOptions.bulletSpeedY, time);
-        }
-        if (this.downKey.isDown) {
-            this.fire(0, +gameOptions.bulletSpeedY, time);
-        }
+
+        
 
         this.bullets.forEach((bullet) => {
             bullet.update();
