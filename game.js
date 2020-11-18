@@ -4,11 +4,11 @@ const getRandomInt = (max) => {
 }
 
 const gameOptions = {
-    issaSpeedX: 5,
-    issaSpeedY: 5,
-    bulletSpeedX: 20,
-    bulletSpeedY: 20,
-    bulletCount: 5,
+    issacSpeedX: 5,
+    issacSpeedY: 5,
+    bulletSpeedX: 10,
+    bulletSpeedY: 10,
+    bulletCount: 4,
     minMillisTimeDeltaFire: 100
 }
 

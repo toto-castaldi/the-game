@@ -48,16 +48,16 @@ class Commands extends Phaser.Scene {
 
     update(time, update) {
         if (this.wKey.isDown) {
-            this.isaac.y -= gameOptions.issaSpeedY
+            this.isaac.y -= gameOptions.issacSpeedY
         }
         if (this.sKey.isDown) {
-            this.isaac.y += gameOptions.issaSpeedY
+            this.isaac.y += gameOptions.issacSpeedY
         }
         if (this.aKey.isDown) {
-            this.isaac.x -= gameOptions.issaSpeedY
+            this.isaac.x -= gameOptions.issacSpeedX
         }
         if (this.dKey.isDown) {
-            this.isaac.x += gameOptions.issaSpeedY
+            this.isaac.x += gameOptions.issacSpeedX
         }
 
         const fireChecks = [0, 1, 2, 3];
