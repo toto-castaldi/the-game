@@ -12,14 +12,21 @@ class Commands extends Phaser.Scene {
         this.load.image("isaac", "assets/isaac.png");
         this.load.image("bullet", "assets/bullet.png");
         this.load.image("room", "assets/room-commands.png");
+        this.load.image("life", "assets/Herz.svg");
     }
 
     create() {
         this.add.image(this.game.config.width / 2, this.game.config.height / 2, "room");
 
+        for (var x = 0; x < 3; x++) {
+            let image = this.add.image(this.game.config.width / 2 + x * 30, 100, "life");
+            image.displayWidth = 30;
+            image.displayHeight = 40;
+        }
+
         this.isaac = this.add.sprite(this.game.config.width / 2, this.game.config.height / 2, "isaac");
-        this.isaac.displayWidth = this.game.config.width * 0.065; 
-        this.isaac.displayHeight = this.game.config.height * 0.1; 
+        this.isaac.displayWidth = this.game.config.width * 0.065;
+        this.isaac.displayHeight = this.game.config.height * 0.1;
         this.isaac.setDepth(2);
 
         this.wKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W);
@@ -75,7 +82,7 @@ class Commands extends Phaser.Scene {
         if (this.downKey.isDown) {
             this.fire(0, +gameOptions.bulletSpeedY, time);
         }
-        
+
 
         this.bullets.forEach((bullet) => {
             bullet.update();
