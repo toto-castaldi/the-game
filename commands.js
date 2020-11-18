@@ -11,12 +11,15 @@ class Commands extends Phaser.Scene {
     preload() {
         this.load.image("isaac", "assets/isaac.png");
         this.load.image("bullet", "assets/bullet.png");
+        this.load.image("room", "assets/room-commands.png");
     }
 
     create() {
+        this.add.image(this.game.config.width / 2, this.game.config.height / 2, "room");
+
         this.isaac = this.add.sprite(this.game.config.width / 2, this.game.config.height / 2, "isaac");
-        this.isaac.displayWidth = this.game.config.width / 10;
-        this.isaac.displayHeight = this.isaac.displayWidth;
+        this.isaac.displayWidth = this.game.config.width * 0.065; 
+        this.isaac.displayHeight = this.game.config.height * 0.1; 
         this.isaac.setDepth(2);
 
         this.wKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W);
@@ -37,7 +40,7 @@ class Commands extends Phaser.Scene {
                 this.bullets.push(new Bullet(bulletState, this));
                 this.lastFire = time;
             } else {
-                const freeBullet = this.bullets.find((bullet) => bullet.isOutOfBound());
+                const freeBullet = this.bullets.find((bullet) => bullet.isFinished());
                 if (freeBullet) {
                     freeBullet.reborn(bulletState);
                     this.lastFire = time;
@@ -60,30 +63,25 @@ class Commands extends Phaser.Scene {
             this.isaac.x += gameOptions.issacSpeedX
         }
 
-        const fireChecks = [0, 1, 2, 3];
-        while (fireChecks.length > 0) {
-            const index = getRandomInt(fireChecks.length);
-            const value = fireChecks[index];
-            fireChecks.splice(index, 1);
-
-            if (value === 0 && this.leftKey.isDown) {
-                this.fire(-gameOptions.bulletSpeedX, 0, time);
-            }
-            if (value === 1 && this.rightKey.isDown) {
-                this.fire(gameOptions.bulletSpeedX, 0, time);
-            }
-            if (value === 2 && this.upKey.isDown) {
-                this.fire(0, -gameOptions.bulletSpeedY, time);
-            }
-            if (value === 3 && this.downKey.isDown) {
-                this.fire(0, +gameOptions.bulletSpeedY, time);
-            }
+        if (this.leftKey.isDown) {
+            this.fire(-gameOptions.bulletSpeedX, 0, time);
         }
-
+        if (this.rightKey.isDown) {
+            this.fire(gameOptions.bulletSpeedX, 0, time);
+        }
+        if (this.upKey.isDown) {
+            this.fire(0, -gameOptions.bulletSpeedY, time);
+        }
+        if (this.downKey.isDown) {
+            this.fire(0, +gameOptions.bulletSpeedY, time);
+        }
         
 
         this.bullets.forEach((bullet) => {
             bullet.update();
+            if (bullet.isFinished()) {
+                bullet.destroy();
+            }
         });
 
 
