@@ -1,4 +1,5 @@
-class Commands extends Phaser.Scene {
+class CommandsScene extends Phaser.Scene {
+
     constructor() {
         super({
             key: "Commands"
@@ -6,6 +7,8 @@ class Commands extends Phaser.Scene {
 
         this.bullets = [];
         this.lastFire;
+        this.isaac;
+        this.room;
     }
 
     preload() {
@@ -15,13 +18,10 @@ class Commands extends Phaser.Scene {
     }
 
     create() {
-        this.add.image(this.game.config.width / 2, this.game.config.height / 2, "room");
+        this.room = new Room(this);
 
-        this.isaac = this.add.sprite(this.game.config.width / 2, this.game.config.height / 2, "isaac");
-        this.isaac.displayWidth = this.game.config.width * 0.065; 
-        this.isaac.displayHeight = this.game.config.height * 0.1; 
-        this.isaac.setDepth(2);
-
+        this.isaac = new Isaac(this);
+        
         this.wKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W);
         this.sKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S);
         this.aKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
@@ -35,7 +35,7 @@ class Commands extends Phaser.Scene {
 
     fire(velocityX, velocityY, time) {
         if (this.lastFire === undefined || this.lastFire < time - gameOptions.minMillisTimeDeltaFire) {
-            const bulletState = { x: this.isaac.x, y: this.isaac.y, velocityX, velocityY };
+            const bulletState = { x: this.isaac.sprite.x, y: this.isaac.sprite.y, velocityX, velocityY };
             if (this.bullets.length < gameOptions.bulletCount) {
                 this.bullets.push(new Bullet(bulletState, this));
                 this.lastFire = time;
@@ -51,16 +51,16 @@ class Commands extends Phaser.Scene {
 
     update(time, update) {
         if (this.wKey.isDown) {
-            this.isaac.y -= gameOptions.issacSpeedY
+            this.isaac.move(0, -gameOptions.issacSpeedY);
         }
         if (this.sKey.isDown) {
-            this.isaac.y += gameOptions.issacSpeedY
+            this.isaac.move(0, +gameOptions.issacSpeedY);
         }
         if (this.aKey.isDown) {
-            this.isaac.x -= gameOptions.issacSpeedX
+            this.isaac.move(-gameOptions.issacSpeedX, 0);
         }
         if (this.dKey.isDown) {
-            this.isaac.x += gameOptions.issacSpeedX
+            this.isaac.move(gameOptions.issacSpeedX, 0);
         }
 
         if (this.leftKey.isDown) {
@@ -79,9 +79,7 @@ class Commands extends Phaser.Scene {
 
         this.bullets.forEach((bullet) => {
             bullet.update();
-            if (bullet.isFinished()) {
-                bullet.destroy();
-            }
+            
         });
 
 

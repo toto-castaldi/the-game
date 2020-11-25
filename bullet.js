@@ -23,6 +23,9 @@ class Bullet {
     update() {
         this.sprite.x += this.config.velocityX;
         this.sprite.y += this.config.velocityY;
+        if (this.isFinished()) {
+            this.destroy();
+        }
     }
 
     destroy() {
@@ -30,9 +33,8 @@ class Bullet {
     }
 
     isFinished() {
-        const isOutOfBoundScreen = this.sprite.x < 0 || this.sprite.x > this.gameConfig.width || this.sprite.y < 0 || this.sprite.y > this.gameConfig.height;
         const finishedX = Math.abs(this.sprite.x - this.originalX) > this.gameConfig.width / 2;
-        return isOutOfBoundScreen || finishedX;
+        return this.scene.room.isTouchingBoundaries(this.sprite) || finishedX;
     }
 
 }
