@@ -9,7 +9,7 @@ class Room {
             yMax : 5 / 6
         }
 
-        scene.add.image(scene.game.config.width / 2, scene.game.config.height / 2, "room");
+        scene.add.image(scene.game.config.width / 2, scene.game.config.height / 2, "sfondoisaac2");
 
     }
 

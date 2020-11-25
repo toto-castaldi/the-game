@@ -15,6 +15,7 @@ class CommandsScene extends Phaser.Scene {
         this.load.image("isaac", "assets/isaac.png");
         this.load.image("bullet", "assets/bullet.png");
         this.load.image("room", "assets/room-commands.png");
+        this.load.image("sfondoisaac2", "assets/sfondoisaac2.png");
     }
 
     create() {
