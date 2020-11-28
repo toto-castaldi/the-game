@@ -4,19 +4,25 @@ const getRandomInt = (max) => {
 }
 
 const gameOptions = {
-    issacSpeedX: 5,
-    issacSpeedY: 5,
-    bulletSpeedX: 8,
-    bulletSpeedY: 8,
+    issacSpeedX: 300,
+    issacSpeedY: 300,
+    bulletSpeedX: 400,
+    bulletSpeedY: 400,
     bulletCount: 3,
     minMillisTimeDeltaFire: 500
 }
 
 const game = new Phaser.Game({
     type: Phaser.AUTO,
-    //backgroundColor: 0x000000,
+    backgroundColor: 0x000000,
     width: 800,
     height: 600,
-    scene: [CommandsScene],
-    parent: "the-game"
+    scene: [Scene],
+    parent: "the-game",
+    physics: {
+        default: "arcade",
+        arcade: {
+            debug: false
+        }
+    }
 });
