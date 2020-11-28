@@ -15,6 +15,12 @@ class CommandsScene extends Phaser.Scene {
         this.load.image("isaac", "assets/isaac.png");
         this.load.image("bullet", "assets/bullet.png");
         this.load.image("room", "assets/room-commands.png");
+        this.load.image("sfondoisaac2", "assets/sfondoisaac2.png");
+        this.load.image("pietra1", "assets/pietra1.png");
+        this.load.image("pietra2", "assets/pietra2.png");
+        this.load.image("pietra3", "assets/pietra3.png");
+
+
     }
 
     create() {
@@ -30,6 +36,10 @@ class CommandsScene extends Phaser.Scene {
         this.upKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.UP);
         this.leftKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);
         this.rightKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT);
+
+        this.add.sprite(150,400, "pietra1")
+        this.add.sprite(250,300, "pietra2")
+        this.add.sprite(350,200, "pietra3")
 
     }
 
