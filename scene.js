@@ -11,47 +11,24 @@ class Scene extends Phaser.Scene {
         this.load.image("isaac", "assets/isaac.png");
         this.load.image("bullet", "assets/bullet.png");
 
-        this.load.tilemapCSV("map", "assets/tiles.csv");
-        this.load.image("tiles", "assets/tiles.png");
-
+        this.load.image('tiles', 'tiled/tiled.png');
+        this.load.tilemapTiledJSON('map', 'tiled/level-00.json');
     }
 
     create() {
         //usando le tile creo il livello
-        this.map = this.make.tilemap({ key: "map", tileWidth: 32, tileHeight: 32 });
-        this.tileset = this.map.addTilesetImage("tiles");
-        this.layer = this.map.createStaticLayer(0, this.tileset, 0, this.game.config.height - 16 * 32);
+        
+        this.map = this.make.tilemap({ key: 'map' });
 
-        //sopra
-        this.map.setCollisionBetween(0, 49);
-        //dx
-        this.map.setCollisionBetween(73, 74);
-        this.map.setCollisionBetween(80, 81);
-        this.map.setCollisionBetween(86, 87);
-        this.map.setCollisionBetween(92, 93);
-        this.map.setCollisionBetween(98, 99);
-        this.map.setCollisionBetween(105, 106);
-        this.map.setCollisionBetween(111, 112);
-        this.map.setCollisionBetween(117, 118);
-        this.map.setCollisionBetween(123, 124);
-        this.map.setCollisionBetween(129, 130);
-        this.map.setCollisionBetween(136, 137);
-        //sotto
-        this.map.setCollisionBetween(163, 212);
-        //sx
-        this.map.setCollisionBetween(50, 51);
-        this.map.setCollisionBetween(75, 76);
-        this.map.setCollisionBetween(82, 83);
-        this.map.setCollisionBetween(88, 89);
-        this.map.setCollisionBetween(94, 95);
-        this.map.setCollisionBetween(100, 101);
-        this.map.setCollisionBetween(107, 108);
-        this.map.setCollisionBetween(113, 114);
-        this.map.setCollisionBetween(119, 120);
-        this.map.setCollisionBetween(125, 126);
-        this.map.setCollisionBetween(131, 132);
-        //rocce
-        this.map.setCollisionBetween(213, 215);
+        this.map.addTilesetImage("tiled", "tiles");
+
+        this.baseLayer = this.map.createStaticLayer("base", "tiled", 0, this.game.config.height - 16 * 32);
+        this.rockLayer = this.map.createStaticLayer("rocks", "tiled", 0, this.game.config.height - 16 * 32);
+    
+        console.log(this.map)
+
+        this.map.setCollisionByExclusion(79, true, true, "base");
+        this.map.setCollisionBetween(80, 82, true, true, "rocks");
 
         //lo sprite del giocatore
         this.player = this.physics.add.sprite(this.game.config.width / 2, this.game.config.height / 2, "isaac");
@@ -73,8 +50,10 @@ class Scene extends Phaser.Scene {
         this.rightKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT);
 
         //collisione tra il giocatore e il layer del livello
-        this.physics.add.collider(this.player, this.layer);
-        this.physics.add.collider(this.bullets, this.layer, this.bulletCollide, null, this);
+        this.physics.add.collider(this.player, this.rockLayer);
+        this.physics.add.collider(this.player, this.baseLayer);
+        this.physics.add.collider(this.bullets, this.baseLayer, this.bulletCollide, null, this);
+        this.physics.add.collider(this.bullets, this.rockLayer, this.bulletCollide, null, this);
 
     }
 

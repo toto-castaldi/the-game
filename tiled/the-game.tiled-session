@@ -1,0 +1,70 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "level-00.json",
+    "expandedProjectPaths": [
+    ],
+    "exportAsImage.includeBackgroundColor": true,
+    "exportAsImage.useCurrentScale": false,
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "": {
+            "scaleInDock": 1
+        },
+        "/home/toto/scm-projects/the-game/assets/tiles.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "/home/toto/scm-projects/the-game/assets/untitled.json": {
+            "scale": 1.2491586538461539,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 379.4554026748773,
+                "y": 256.1724237467526
+            }
+        },
+        "level-00.json": {
+            "scale": 0.75,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 382.6666666666667,
+                "y": 277.33333333333337
+            }
+        },
+        "level-00.json#tiled": {
+            "scaleInDock": 1
+        },
+        "sfondo.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "tiled.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "tiles.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "map.height": 16,
+    "map.lastUsedFormat": "json",
+    "map.width": 25,
+    "openFiles": [
+        "level-00.json",
+        "tiled.tsx"
+    ],
+    "project": "the-game.tiled-project",
+    "recentFiles": [
+        "tiled.tsx",
+        "level-00.json",
+        "untitled.json",
+        "tiles.tsx",
+        "sfondo.tsx",
+        "/home/toto/scm-projects/the-game/assets/untitled.json",
+        "/home/toto/scm-projects/the-game/assets/tiles.tsx"
+    ],
+    "tileset.lastUsedFormat": "tsx"
+}
