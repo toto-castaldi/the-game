@@ -2,7 +2,7 @@ class Scene extends Phaser.Scene {
 
     constructor() {
         super({
-            key: "Scens"
+            key: "Scene"
         })
 
     }
@@ -17,16 +17,10 @@ class Scene extends Phaser.Scene {
 
     create() {
         //usando le tile creo il livello
-        
         this.map = this.make.tilemap({ key: 'map' });
-
         this.map.addTilesetImage("tiled", "tiles");
-
         this.baseLayer = this.map.createStaticLayer("base", "tiled", 0, this.game.config.height - 16 * 32);
         this.rockLayer = this.map.createStaticLayer("rocks", "tiled", 0, this.game.config.height - 16 * 32);
-    
-        console.log(this.map)
-
         this.map.setCollisionByExclusion(79, true, true, "base");
         this.map.setCollisionBetween(80, 82, true, true, "rocks");
 
@@ -49,7 +43,7 @@ class Scene extends Phaser.Scene {
         this.leftKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);
         this.rightKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT);
 
-        //collisione tra il giocatore e il layer del livello
+        //collisioni
         this.physics.add.collider(this.player, this.rockLayer);
         this.physics.add.collider(this.player, this.baseLayer);
         this.physics.add.collider(this.bullets, this.baseLayer, this.bulletCollide, null, this);
