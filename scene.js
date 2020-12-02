@@ -10,6 +10,7 @@ class Scene extends Phaser.Scene {
     preload() {
         this.load.image("isaac", "assets/isaac.png");
         this.load.image("bullet", "assets/bullet.png");
+        this.load.image("heart", "assets/heart.png");
 
         this.load.image('tiles', 'tiled/tiled.png');
         this.load.tilemapTiledJSON('map', 'tiled/level-00.json');
@@ -49,6 +50,8 @@ class Scene extends Phaser.Scene {
         this.physics.add.collider(this.bullets, this.baseLayer, this.bulletCollide, null, this);
         this.physics.add.collider(this.bullets, this.rockLayer, this.bulletCollide, null, this);
 
+        this.playerEnergy = new Player(this);
+
     }
 
     bulletCollide(bullet, element) {
@@ -58,7 +61,7 @@ class Scene extends Phaser.Scene {
 
     fire(velocityX, velocityY, time) {
         if (this.lastFire === undefined || this.lastFire < time - gameOptions.minMillisTimeDeltaFire) {
-            
+
             let inactiveBullet = this.bullets.children.getArray().find(bullet => !bullet.body.enable);
             if (inactiveBullet) {
                 inactiveBullet.enableBody(true, this.player.x, this.player.y, 0, true, true);
@@ -77,6 +80,9 @@ class Scene extends Phaser.Scene {
     }
 
     update(time, update) {
+        
+
+
         this.player.setVelocity(0);
 
         if (this.dKey.isDown) {
