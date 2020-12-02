@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "level-00.json",
+    "activeFile": "",
     "expandedProjectPaths": [
     ],
     "exportAsImage.includeBackgroundColor": true,
@@ -34,7 +34,7 @@
             }
         },
         "level-00.json#tiled": {
-            "scaleInDock": 1
+            "scaleInDock": 0.5
         },
         "sfondo.tsx": {
             "scaleInDock": 1,
@@ -53,13 +53,11 @@
     "map.lastUsedFormat": "json",
     "map.width": 25,
     "openFiles": [
-        "level-00.json",
-        "tiled.tsx"
     ],
     "project": "the-game.tiled-project",
     "recentFiles": [
-        "tiled.tsx",
         "level-00.json",
+        "tiled.tsx",
         "untitled.json",
         "tiles.tsx",
         "sfondo.tsx",

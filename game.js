@@ -9,7 +9,9 @@ const gameOptions = {
     bulletSpeedX: 400,
     bulletSpeedY: 400,
     bulletCount: 3,
-    minMillisTimeDeltaFire: 500
+    minMillisTimeDeltaFire: 500,
+    maximumPlayerEnergy : 6,
+    startingPlayerEnergy : 4
 }
 
 const game = new Phaser.Game({

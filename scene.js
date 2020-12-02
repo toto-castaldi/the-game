@@ -5,14 +5,30 @@ class Scene extends Phaser.Scene {
             key: "Scene"
         })
 
+        this.playing = true;
     }
 
     preload() {
         this.load.image("isaac", "assets/isaac.png");
         this.load.image("bullet", "assets/bullet.png");
+        this.load.image("heart", "assets/heart.png");
+        this.load.image("game-over", "assets/game-over.png");
 
         this.load.image('tiles', 'tiled/tiled.png');
         this.load.tilemapTiledJSON('map', 'tiled/level-00.json');
+    }
+
+    gameOver() {
+        this.playing = false;
+        let gameOverSprite = this.add.sprite(this.game.config.width / 2, this.game.config.height / 2, "game-over");
+        gameOverSprite.setDepth(2);
+        gameOverSprite.displayWidth = this.game.config.width * 1.5;
+        gameOverSprite.displayHeight = this.game.config.height * 1.5;
+    }
+
+    restart() {
+        this.playing = true;
+        this.scene.start('Scene');   
     }
 
     create() {
@@ -30,7 +46,7 @@ class Scene extends Phaser.Scene {
         this.player.setCollideWorldBounds(true);
         this.player.displayWidth = this.game.config.width * 0.065;
         this.player.displayHeight = this.game.config.height * 0.1;
-        this.player.setDepth(2);
+        this.player.setDepth(1);
 
         this.bullets = this.physics.add.group();
 
@@ -49,7 +65,19 @@ class Scene extends Phaser.Scene {
         this.physics.add.collider(this.bullets, this.baseLayer, this.bulletCollide, null, this);
         this.physics.add.collider(this.bullets, this.rockLayer, this.bulletCollide, null, this);
 
+        this.playerEnergy = new Player(this);
+
+        this.input.on('pointerdown', (pointer) => {
+
+            if (!this.playing) {
+                this.restart();
+            }
+
+        }, this);
+
     }
+
+    
 
     bulletCollide(bullet, element) {
         bullet.disableBody(true, true);
@@ -58,7 +86,7 @@ class Scene extends Phaser.Scene {
 
     fire(velocityX, velocityY, time) {
         if (this.lastFire === undefined || this.lastFire < time - gameOptions.minMillisTimeDeltaFire) {
-            
+
             let inactiveBullet = this.bullets.children.getArray().find(bullet => !bullet.body.enable);
             if (inactiveBullet) {
                 inactiveBullet.enableBody(true, this.player.x, this.player.y, 0, true, true);
@@ -79,35 +107,35 @@ class Scene extends Phaser.Scene {
     update(time, update) {
         this.player.setVelocity(0);
 
-        if (this.dKey.isDown) {
-            this.player.setVelocityX(gameOptions.issacSpeedX);
-        }
+        if (this.playing) {
+            if (this.dKey.isDown) {
+                this.player.setVelocityX(gameOptions.issacSpeedX);
+            }
 
-        if (this.aKey.isDown) {
-            this.player.setVelocityX(-gameOptions.issacSpeedX);
-        }
+            if (this.aKey.isDown) {
+                this.player.setVelocityX(-gameOptions.issacSpeedX);
+            }
 
-        if (this.sKey.isDown) {
-            this.player.setVelocityY(gameOptions.issacSpeedY);
-        }
+            if (this.sKey.isDown) {
+                this.player.setVelocityY(gameOptions.issacSpeedY);
+            }
 
-        if (this.wKey.isDown) {
-            this.player.setVelocityY(-gameOptions.issacSpeedY);
-        }
+            if (this.wKey.isDown) {
+                this.player.setVelocityY(-gameOptions.issacSpeedY);
+            }
 
-        if (this.leftKey.isDown) {
-            this.fire(-gameOptions.bulletSpeedX, 0, time);
+            if (this.leftKey.isDown) {
+                this.fire(-gameOptions.bulletSpeedX, 0, time);
+            }
+            if (this.rightKey.isDown) {
+                this.fire(gameOptions.bulletSpeedX, 0, time);
+            }
+            if (this.upKey.isDown) {
+                this.fire(0, -gameOptions.bulletSpeedY, time);
+            }
+            if (this.downKey.isDown) {
+                this.fire(0, +gameOptions.bulletSpeedY, time);
+            }
         }
-        if (this.rightKey.isDown) {
-            this.fire(gameOptions.bulletSpeedX, 0, time);
-        }
-        if (this.upKey.isDown) {
-            this.fire(0, -gameOptions.bulletSpeedY, time);
-        }
-        if (this.downKey.isDown) {
-            this.fire(0, +gameOptions.bulletSpeedY, time);
-        }
-
-
     }
 }
