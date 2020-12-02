@@ -8,16 +8,6 @@ class Scene extends Phaser.Scene {
         this.playing = true;
     }
 
-    preload() {
-        this.load.image("isaac", "assets/isaac.png");
-        this.load.image("bullet", "assets/bullet.png");
-        this.load.image("heart", "assets/heart.png");
-        this.load.image("game-over", "assets/game-over.png");
-
-        this.load.image('tiles', 'tiled/tiled.png');
-        this.load.tilemapTiledJSON('map', 'tiled/level-00.json');
-    }
-
     gameOver() {
         this.playing = false;
         let gameOverSprite = this.add.sprite(this.game.config.width / 2, this.game.config.height / 2, "game-over");
@@ -28,27 +18,29 @@ class Scene extends Phaser.Scene {
 
     restart() {
         this.playing = true;
-        this.scene.start('Scene');   
+        this.scene.start('Scene');
     }
 
     create() {
-        //usando le tile creo il livello
-        this.map = this.make.tilemap({ key: 'map' });
+        //'map' è definita in caricamento con load.tilemapTiledJSON
+        this.map = this.make.tilemap({ key: "map" });
+
+        //'tiled' è definito come tileset in Tiled. 'tiles' è definita in caricamento con load.image
         this.map.addTilesetImage("tiled", "tiles");
+
+        //'tiled' è definito come tileset in Tiled. 
+        //'base' è definito come tileset in Tiled. 
+        //'rocks' è definito come tileset in Tiled. 
         this.baseLayer = this.map.createStaticLayer("base", "tiled", 0, this.game.config.height - 16 * 32);
         this.rockLayer = this.map.createStaticLayer("rocks", "tiled", 0, this.game.config.height - 16 * 32);
-        this.map.setCollisionByExclusion(79, true, true, "base");
-        this.map.setCollisionBetween(80, 82, true, true, "rocks");
+        //collisioni con proprietà definite in Tiled
+        this.baseLayer.setCollisionByProperty({ collides: true });
+        this.rockLayer.setCollisionByProperty({ collides: true });
 
-        //lo sprite del giocatore
-        this.player = this.physics.add.sprite(this.game.config.width / 2, this.game.config.height / 2, "isaac");
-        //non esce dal mondo
-        this.player.setCollideWorldBounds(true);
-        this.player.displayWidth = this.game.config.width * 0.065;
-        this.player.displayHeight = this.game.config.height * 0.1;
-        this.player.setDepth(1);
-
+        //gruppo di proiettili
         this.bullets = this.physics.add.group();
+
+        this.player = new Player(this, this.game.config.width / 2, this.game.config.height / 2);
 
         this.wKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W);
         this.sKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S);
@@ -65,19 +57,26 @@ class Scene extends Phaser.Scene {
         this.physics.add.collider(this.bullets, this.baseLayer, this.bulletCollide, null, this);
         this.physics.add.collider(this.bullets, this.rockLayer, this.bulletCollide, null, this);
 
-        this.playerEnergy = new Player(this);
 
         this.input.on('pointerdown', (pointer) => {
-
             if (!this.playing) {
                 this.restart();
             }
-
         }, this);
 
+        if (gameOptions.debug) {
+            const debugGraphics = this.add.graphics().setAlpha(0.75);
+            const debugOptions = {
+                tileColor: null, 
+                collidingTileColor: new Phaser.Display.Color(243, 134, 48, 255), 
+                faceColor: new Phaser.Display.Color(40, 39, 37, 255) 
+            };
+            //this.baseLayer.renderDebug(debugGraphics, debugOptions);
+            this.rockLayer.renderDebug(debugGraphics, debugOptions);
+        }
     }
 
-    
+
 
     bulletCollide(bullet, element) {
         bullet.disableBody(true, true);

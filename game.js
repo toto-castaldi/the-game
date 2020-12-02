@@ -11,7 +11,8 @@ const gameOptions = {
     bulletCount: 3,
     minMillisTimeDeltaFire: 500,
     maximumPlayerEnergy : 6,
-    startingPlayerEnergy : 4
+    startingPlayerEnergy : 4,
+    debug : false
 }
 
 const game = new Phaser.Game({
@@ -19,12 +20,12 @@ const game = new Phaser.Game({
     backgroundColor: 0x000000,
     width: 800,
     height: 600,
-    scene: [Scene],
+    scene: [Loader, Scene],
     parent: "the-game",
     physics: {
         default: "arcade",
         arcade: {
-            debug: false
+            debug: gameOptions.debug
         }
     }
 });
