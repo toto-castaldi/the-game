@@ -1,19 +1,25 @@
 class Player {
 
     constructor(scene) {
-        this.energyLevel = 6;
+        this.scene = scene;
+        this.energyLevel = gameOptions.startingPlayerEnergy;
 
         this.energySprites = [];
 
-        for (let i = 0; i < this.energyLevel; i++) {
-            console.log("assas");
-            this.energySprites.push(scene.add.sprite(scene.game.config.width / 2 + 120 + i * 20, 50, "heart"));
+        for (let i = 0; i < gameOptions.maximumPlayerEnergy; i++) {
+            this.energySprites.push(this.scene.add.sprite(this.scene.game.config.width / 2 + 120 + i * 20, 50, "heart"));
         }
+        this.updateEnergySprites();
     }
 
     hit() {
-        this.energyLevel--;
-        this.updateEnergySprites();
+        if (this.energyLevel > 0) {
+            this.energyLevel--;
+            this.updateEnergySprites();
+            if (this.energyLevel == 0) {
+                this.scene.gameOver();
+            }
+        }
     }
 
     updateEnergySprites() {
@@ -23,8 +29,10 @@ class Player {
     }
 
     heal() {
-        this.energyLevel ++;
-        this.updateEnergySprites();
+        if (this.energyLevel < gameOptions.maximumPlayerEnergy) {
+            this.energyLevel++;
+            this.updateEnergySprites();
+        }
     }
 
 
