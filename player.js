@@ -2,7 +2,7 @@ class Player extends Phaser.Physics.Arcade.Sprite {
 
     constructor (scene, x, y)
     {
-        super(scene, x, y, "isaac");
+        super(scene, x, y, "texture",  "isaac.png");
 
         scene.add.existing(this);
         scene.physics.add.existing(this);
@@ -23,7 +23,7 @@ class Player extends Phaser.Physics.Arcade.Sprite {
         this.energySprites = [];
 
         for (let i = 0; i < gameOptions.maximumPlayerEnergy; i++) {
-            this.energySprites.push(scene.add.sprite(scene.game.config.width / 2 + 120 + i * 20, 50, "heart"));
+            this.energySprites.push(scene.add.sprite(scene.game.config.width / 2 + 120 + i * 20, 50, "texture", "heart.png"));
         }
         this.updateEnergySprites();
     }

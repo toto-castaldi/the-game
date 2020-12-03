@@ -1,0 +1,209 @@
+{
+	"textures": [
+		{
+			"image": "texture.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 988,
+				"h": 481
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "bullet.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 395,
+						"h": 404
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 395,
+						"h": 404
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 395,
+						"h": 404
+					}
+				},
+				{
+					"filename": "isaac.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 383,
+						"h": 524
+					},
+					"spriteSourceSize": {
+						"x": 32,
+						"y": 33,
+						"w": 298,
+						"h": 479
+					},
+					"frame": {
+						"x": 398,
+						"y": 1,
+						"w": 298,
+						"h": 479
+					}
+				},
+				{
+					"filename": "game-over.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 640,
+						"h": 480
+					},
+					"spriteSourceSize": {
+						"x": 174,
+						"y": 165,
+						"w": 289,
+						"h": 182
+					},
+					"frame": {
+						"x": 698,
+						"y": 1,
+						"w": 289,
+						"h": 182
+					}
+				},
+				{
+					"filename": "red_slime/idle/red_slime-idle-2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 36,
+						"h": 34
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 36,
+						"h": 34
+					},
+					"frame": {
+						"x": 698,
+						"y": 185,
+						"w": 36,
+						"h": 34
+					}
+				},
+				{
+					"filename": "red_slime/idle/red_slime-idle-0.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 36,
+						"h": 34
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 36,
+						"h": 33
+					},
+					"frame": {
+						"x": 698,
+						"y": 221,
+						"w": 36,
+						"h": 33
+					}
+				},
+				{
+					"filename": "red_slime/idle/red_slime-idle-1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 36,
+						"h": 34
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 36,
+						"h": 33
+					},
+					"frame": {
+						"x": 698,
+						"y": 256,
+						"w": 36,
+						"h": 33
+					}
+				},
+				{
+					"filename": "red_slime/idle/red_slime-idle-3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 36,
+						"h": 34
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 36,
+						"h": 33
+					},
+					"frame": {
+						"x": 698,
+						"y": 291,
+						"w": 36,
+						"h": 33
+					}
+				},
+				{
+					"filename": "red_slime/idle/red_slime-idle-4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 36,
+						"h": 34
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 36,
+						"h": 32
+					},
+					"frame": {
+						"x": 698,
+						"y": 326,
+						"w": 36,
+						"h": 32
+					}
+				},
+				{
+					"filename": "heart.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 48,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 11,
+						"y": 11,
+						"w": 29,
+						"h": 32
+					},
+					"frame": {
+						"x": 736,
+						"y": 185,
+						"w": 29,
+						"h": 32
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:2e323702be37333b2656f9ad887088cc:03957ad3600f58b8adf5875483d5652d:88db1022cd6b660616541d2788fcd4f7$"
+	}
+}

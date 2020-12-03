@@ -41,6 +41,7 @@ class Scene extends Phaser.Scene {
         this.bullets = this.physics.add.group();
 
         this.player = new Player(this, this.game.config.width / 2, this.game.config.height / 2);
+        this.enemy = new Enemy(this, this.game.config.width / 2 + 150, this.game.config.height / 2);
 
         this.wKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W);
         this.sKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S);
@@ -51,9 +52,11 @@ class Scene extends Phaser.Scene {
         this.leftKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);
         this.rightKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT);
 
-        //collisioni
+        //collisioni        
         this.physics.add.collider(this.player, this.rockLayer);
         this.physics.add.collider(this.player, this.baseLayer);
+        this.physics.add.collider(this.enemy, this.rockLayer);
+        this.physics.add.collider(this.enemy, this.baseLayer);
         this.physics.add.collider(this.bullets, this.baseLayer, this.bulletCollide, null, this);
         this.physics.add.collider(this.bullets, this.rockLayer, this.bulletCollide, null, this);
 
@@ -92,7 +95,7 @@ class Scene extends Phaser.Scene {
                 inactiveBullet.setVelocity(velocityX, velocityY);
                 this.lastFire = time;
             } else if (this.bullets.countActive() < gameOptions.bulletCount) {
-                let bullet = this.bullets.create(this.player.x, this.player.y, "bullet");
+                let bullet = this.bullets.create(this.player.x, this.player.y, "texture", "bullet");
                 bullet.displayWidth = this.game.config.width / 15;
                 bullet.displayHeight = this.game.config.height / 15;
                 bullet.setCollideWorldBounds(true);
