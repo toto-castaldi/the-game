@@ -22,6 +22,8 @@ class Scene extends Phaser.Scene {
     }
 
     create() {
+        const deltaY = this.game.config.height - 16 * 32;
+
         //'map' è definita in caricamento con load.tilemapTiledJSON
         this.map = this.make.tilemap({ key: "map" });
 
@@ -31,8 +33,8 @@ class Scene extends Phaser.Scene {
         //'tiled' è definito come tileset in Tiled. 
         //'base' è definito come tileset in Tiled. 
         //'rocks' è definito come tileset in Tiled. 
-        this.baseLayer = this.map.createStaticLayer("base", "tiled", 0, this.game.config.height - 16 * 32);
-        this.rockLayer = this.map.createStaticLayer("rocks", "tiled", 0, this.game.config.height - 16 * 32);
+        this.baseLayer = this.map.createStaticLayer("base", "tiled", 0, deltaY);
+        this.rockLayer = this.map.createStaticLayer("rocks", "tiled", 0, deltaY);
         //collisioni con proprietà definite in Tiled
         this.baseLayer.setCollisionByProperty({ collides: true });
         this.rockLayer.setCollisionByProperty({ collides: true });
@@ -40,8 +42,14 @@ class Scene extends Phaser.Scene {
         //gruppo di proiettili
         this.bullets = this.physics.add.group();
 
+        this.enemies = this.physics.add.group();
+
         this.player = new Player(this, this.game.config.width / 2, this.game.config.height / 2);
-        this.enemy = new Enemy(this, this.game.config.width / 2 + 150, this.game.config.height / 2);
+
+        this.map.filterObjects("enemy-spawn", function (object) {
+            console.log(this);
+            this.enemies.add(new Enemy(this, object.x , object.y + deltaY));
+        }, this);
 
         this.wKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W);
         this.sKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S);
@@ -55,8 +63,10 @@ class Scene extends Phaser.Scene {
         //collisioni        
         this.physics.add.collider(this.player, this.rockLayer);
         this.physics.add.collider(this.player, this.baseLayer);
-        this.physics.add.collider(this.enemy, this.rockLayer);
-        this.physics.add.collider(this.enemy, this.baseLayer);
+
+        this.physics.add.collider(this.enemies, this.rockLayer, this.enemyCollide, null, this);
+        this.physics.add.collider(this.enemies, this.baseLayer, this.enemyCollide, null, this);
+
         this.physics.add.collider(this.bullets, this.baseLayer, this.bulletCollide, null, this);
         this.physics.add.collider(this.bullets, this.rockLayer, this.bulletCollide, null, this);
 
@@ -79,7 +89,9 @@ class Scene extends Phaser.Scene {
         }
     }
 
-
+    enemyCollide(enemy, element) {
+        enemy.changeDirection();
+    }
 
     bulletCollide(bullet, element) {
         bullet.disableBody(true, true);

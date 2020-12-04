@@ -9,11 +9,8 @@ class Player extends Phaser.Physics.Arcade.Sprite {
 
         this.setCollideWorldBounds(true);
 
-        this.body.onWorldBounds = true;
-
         this.setBodySize(200, 200, true).setOffset(90, 300);
         
-
         this.displayWidth = scene.game.config.width * 0.065;
         this.displayHeight = scene.game.config.height * 0.1;
         this.setDepth(1);

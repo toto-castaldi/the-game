@@ -9,8 +9,6 @@ class Enemy extends Phaser.Physics.Arcade.Sprite {
 
         this.setCollideWorldBounds(true);
 
-        this.body.onWorldBounds = true;
-
         this.setDepth(1);
 
         let frameNames = scene.anims.generateFrameNames('texture', {
@@ -20,6 +18,47 @@ class Enemy extends Phaser.Physics.Arcade.Sprite {
 
         scene.anims.create({ key: 'idle', frames: frameNames, frameRate: 5, repeat: -1 });
         this.anims.play('idle');
+
+        this.direction = new Direction(Direction.LEFT);
+
+        this.setVelocityOnDirection();
+        
+        this.timeMoveEvent = scene.time.addEvent({
+            delay : 2000,
+            callback : () => {
+                this.changeDirection();
+            },
+            loop : true
+        });
+    }
+
+    destroy(fromScene) {
+        this.timeMoveEvent.destroy();
+
+        super.destroy(fromScene);
+    }
+
+    changeDirection () {
+        this.direction = this.direction.randomChange();
+        this.setVelocityOnDirection();
+    }
+
+    setVelocityOnDirection() {
+        switch (this.direction.dir) {
+            case Direction.LEFT:
+                this.setVelocity(-100,0);
+                break;
+            case Direction.RIGHT:
+                this.setVelocity(+100,0);
+                break;
+            case Direction.UP:
+                this.setVelocity(0, -100);
+                break;
+            case Direction.DOWN:
+                this.setVelocity(0,100);
+                break;
+        }
+
     }
 
 

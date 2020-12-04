@@ -9,13 +9,7 @@ class Loader extends Phaser.Scene {
     }
 
     preload() {
-        /*
-        this.load.image("isaac", "assets/isaac.png");
-        this.load.image("bullet", "assets/bullet.png");
-        this.load.image("heart", "assets/heart.png");
-        this.load.image("game-over", "assets/game-over.png");
-        */
-
+        //tutte le texture gestite con TexturePacker
         this.load.multiatlas("texture", "assets/texture.json", "/assets");
 
         //'tiles' è una chiava usata successivamente.
