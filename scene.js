@@ -69,9 +69,15 @@ class Scene extends Phaser.Scene {
 
         this.physics.add.collider(this.bullets, this.baseLayer, this.bulletCollide, null, this);
         this.physics.add.collider(this.bullets, this.rockLayer, this.bulletCollide, null, this);
+        
 
         this.physics.add.collider(this.enemies, this.player, (player, enemy) => {
             player.handleDamage(enemy);
+        }, null);
+
+        this.physics.add.collider(this.bullets, this.enemies, (bullet, enemy) => {
+            bullet.disableBody(true, true);
+            enemy.disableBody(true, true);
         }, null);
 
 
