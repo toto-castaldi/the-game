@@ -3,6 +3,8 @@ const getRandomInt = (max) => {
     return Math.floor(Math.random() * Math.floor(max));
 }
 
+const choice = (a) => a[getRandomInt(a.length)];
+
 const gameOptions = {
     issacSpeedX: 300,
     issacSpeedY: 300,

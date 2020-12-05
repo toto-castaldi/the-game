@@ -6,11 +6,12 @@ class Scene extends Phaser.Scene {
         })
 
         this.playing = true;
+        this.keys = {};
     }
 
     gameOver() {
         this.playing = false;
-        let gameOverSprite = this.add.sprite(this.game.config.width / 2, this.game.config.height / 2, "game-over");
+        let gameOverSprite = this.add.sprite(this.game.config.width / 2, this.game.config.height / 2, "texture", "game-over.png");
         gameOverSprite.setDepth(2);
         gameOverSprite.displayWidth = this.game.config.width * 1.5;
         gameOverSprite.displayHeight = this.game.config.height * 1.5;
@@ -47,18 +48,17 @@ class Scene extends Phaser.Scene {
         this.player = new Player(this, this.game.config.width / 2, this.game.config.height / 2);
 
         this.map.filterObjects("enemy-spawn", function (object) {
-            console.log(this);
             this.enemies.add(new Enemy(this, object.x , object.y + deltaY));
         }, this);
 
-        this.wKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W);
-        this.sKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S);
-        this.aKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
-        this.dKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
-        this.downKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.DOWN);
-        this.upKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.UP);
-        this.leftKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);
-        this.rightKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT);
+        this.keys.w = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W);
+        this.keys.s = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S);
+        this.keys.a = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
+        this.keys.d = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
+        this.keys.down = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.DOWN);
+        this.keys.up = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.UP);
+        this.keys.left = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);
+        this.keys.right = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT);
 
         //collisioni        
         this.physics.add.collider(this.player, this.rockLayer);
@@ -69,6 +69,10 @@ class Scene extends Phaser.Scene {
 
         this.physics.add.collider(this.bullets, this.baseLayer, this.bulletCollide, null, this);
         this.physics.add.collider(this.bullets, this.rockLayer, this.bulletCollide, null, this);
+
+        this.physics.add.collider(this.enemies, this.player, (player, enemy) => {
+            player.handleDamage(enemy);
+        }, null);
 
 
         this.input.on('pointerdown', (pointer) => {
@@ -119,37 +123,26 @@ class Scene extends Phaser.Scene {
     }
 
     update(time, update) {
-        this.player.setVelocity(0);
 
         if (this.playing) {
-            if (this.dKey.isDown) {
-                this.player.setVelocityX(gameOptions.issacSpeedX);
-            }
+            this.player.move({
+                keys : this.keys
+            });
 
-            if (this.aKey.isDown) {
-                this.player.setVelocityX(-gameOptions.issacSpeedX);
-            }
-
-            if (this.sKey.isDown) {
-                this.player.setVelocityY(gameOptions.issacSpeedY);
-            }
-
-            if (this.wKey.isDown) {
-                this.player.setVelocityY(-gameOptions.issacSpeedY);
-            }
-
-            if (this.leftKey.isDown) {
+            if (this.keys.left.isDown) {
                 this.fire(-gameOptions.bulletSpeedX, 0, time);
             }
-            if (this.rightKey.isDown) {
+            if (this.keys.right.isDown) {
                 this.fire(gameOptions.bulletSpeedX, 0, time);
             }
-            if (this.upKey.isDown) {
+            if (this.keys.up.isDown) {
                 this.fire(0, -gameOptions.bulletSpeedY, time);
             }
-            if (this.downKey.isDown) {
+            if (this.keys.down.isDown) {
                 this.fire(0, +gameOptions.bulletSpeedY, time);
             }
+        } else {
+            this.player.setVelocity(0,0);
         }
     }
 }

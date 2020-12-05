@@ -19,7 +19,7 @@ class Enemy extends Phaser.Physics.Arcade.Sprite {
         scene.anims.create({ key: 'idle', frames: frameNames, frameRate: 5, repeat: -1 });
         this.anims.play('idle');
 
-        this.direction = new Direction(Direction.LEFT);
+        this.direction = Directions.LEFT;
 
         this.setVelocityOnDirection();
         
@@ -39,22 +39,22 @@ class Enemy extends Phaser.Physics.Arcade.Sprite {
     }
 
     changeDirection () {
-        this.direction = this.direction.randomChange();
+        this.direction = Directions.randomChange(this.direction);
         this.setVelocityOnDirection();
     }
 
     setVelocityOnDirection() {
-        switch (this.direction.dir) {
-            case Direction.LEFT:
+        switch (this.direction) {
+            case Directions.LEFT:
                 this.setVelocity(-100,0);
                 break;
-            case Direction.RIGHT:
+            case Directions.RIGHT:
                 this.setVelocity(+100,0);
                 break;
-            case Direction.UP:
+            case Directions.UP:
                 this.setVelocity(0, -100);
                 break;
-            case Direction.DOWN:
+            case Directions.DOWN:
                 this.setVelocity(0,100);
                 break;
         }
