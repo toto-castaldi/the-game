@@ -48,7 +48,13 @@ class Scene extends Phaser.Scene {
         this.player = new Player(this, this.game.config.width / 2, this.game.config.height / 2);
 
         this.map.filterObjects("enemy-spawn", function (object) {
-            this.enemies.add(new Enemy(this, object.x , object.y + deltaY));
+            let enemyType = object.properties.filter(prop => prop.name == "enemyType")[0].value;
+            if (enemyType === "red-slime") {
+                this.enemies.add(new RedSlime(this, object.x , object.y + deltaY));
+            }
+            if (enemyType === "blue-slime") {
+                this.enemies.add(new BlueSlime(this, object.x , object.y + deltaY));
+            }
         }, this);
 
         this.keys.w = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W);

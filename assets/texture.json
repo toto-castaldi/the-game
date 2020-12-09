@@ -178,6 +178,342 @@
 					}
 				},
 				{
+					"filename": "blue-slime/walk-left/blue-slime-walk-left-22.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 16,
+						"w": 32,
+						"h": 16
+					},
+					"frame": {
+						"x": 698,
+						"y": 360,
+						"w": 32,
+						"h": 16
+					}
+				},
+				{
+					"filename": "blue-slime/walk-left/blue-slime-walk-left-23.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 16,
+						"w": 32,
+						"h": 16
+					},
+					"frame": {
+						"x": 698,
+						"y": 360,
+						"w": 32,
+						"h": 16
+					}
+				},
+				{
+					"filename": "blue-slime/walk-left/blue-slime-walk-left-4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 16,
+						"w": 32,
+						"h": 16
+					},
+					"frame": {
+						"x": 698,
+						"y": 360,
+						"w": 32,
+						"h": 16
+					}
+				},
+				{
+					"filename": "blue-slime/walk-left/blue-slime-walk-left-5.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 16,
+						"w": 32,
+						"h": 16
+					},
+					"frame": {
+						"x": 698,
+						"y": 360,
+						"w": 32,
+						"h": 16
+					}
+				},
+				{
+					"filename": "blue-slime/walk-left/blue-slime-walk-left-6.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 16,
+						"w": 32,
+						"h": 16
+					},
+					"frame": {
+						"x": 698,
+						"y": 360,
+						"w": 32,
+						"h": 16
+					}
+				},
+				{
+					"filename": "blue-slime/walk-left/blue-slime-walk-left-20.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 19,
+						"w": 32,
+						"h": 13
+					},
+					"frame": {
+						"x": 732,
+						"y": 360,
+						"w": 32,
+						"h": 13
+					}
+				},
+				{
+					"filename": "blue-slime/walk-left/blue-slime-walk-left-21.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 19,
+						"w": 32,
+						"h": 13
+					},
+					"frame": {
+						"x": 732,
+						"y": 360,
+						"w": 32,
+						"h": 13
+					}
+				},
+				{
+					"filename": "blue-slime/walk-left/blue-slime-walk-left-7.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 19,
+						"w": 32,
+						"h": 13
+					},
+					"frame": {
+						"x": 732,
+						"y": 360,
+						"w": 32,
+						"h": 13
+					}
+				},
+				{
+					"filename": "blue-slime/walk-left/blue-slime-walk-left-8.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 19,
+						"w": 32,
+						"h": 13
+					},
+					"frame": {
+						"x": 732,
+						"y": 360,
+						"w": 32,
+						"h": 13
+					}
+				},
+				{
+					"filename": "blue-slime/walk-left/blue-slime-walk-left-0.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 13,
+						"w": 30,
+						"h": 19
+					},
+					"frame": {
+						"x": 736,
+						"y": 185,
+						"w": 30,
+						"h": 19
+					}
+				},
+				{
+					"filename": "blue-slime/walk-left/blue-slime-walk-left-1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 13,
+						"w": 30,
+						"h": 19
+					},
+					"frame": {
+						"x": 736,
+						"y": 185,
+						"w": 30,
+						"h": 19
+					}
+				},
+				{
+					"filename": "blue-slime/walk-left/blue-slime-walk-left-2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 13,
+						"w": 30,
+						"h": 19
+					},
+					"frame": {
+						"x": 736,
+						"y": 185,
+						"w": 30,
+						"h": 19
+					}
+				},
+				{
+					"filename": "blue-slime/walk-left/blue-slime-walk-left-24.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 13,
+						"w": 30,
+						"h": 19
+					},
+					"frame": {
+						"x": 736,
+						"y": 185,
+						"w": 30,
+						"h": 19
+					}
+				},
+				{
+					"filename": "blue-slime/walk-left/blue-slime-walk-left-3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 13,
+						"w": 30,
+						"h": 19
+					},
+					"frame": {
+						"x": 736,
+						"y": 185,
+						"w": 30,
+						"h": 19
+					}
+				},
+				{
+					"filename": "blue-slime/walk-left/blue-slime-walk-left-19.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 13,
+						"w": 30,
+						"h": 19
+					},
+					"frame": {
+						"x": 736,
+						"y": 206,
+						"w": 30,
+						"h": 19
+					}
+				},
+				{
+					"filename": "blue-slime/walk-left/blue-slime-walk-left-9.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 13,
+						"w": 30,
+						"h": 19
+					},
+					"frame": {
+						"x": 736,
+						"y": 206,
+						"w": 30,
+						"h": 19
+					}
+				},
+				{
 					"filename": "heart.png",
 					"rotated": false,
 					"trimmed": true,
@@ -192,10 +528,199 @@
 						"h": 32
 					},
 					"frame": {
-						"x": 736,
-						"y": 185,
+						"x": 766,
+						"y": 227,
 						"w": 29,
 						"h": 32
+					}
+				},
+				{
+					"filename": "blue-slime/walk-left/blue-slime-walk-left-11.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 5,
+						"w": 28,
+						"h": 25
+					},
+					"frame": {
+						"x": 736,
+						"y": 227,
+						"w": 28,
+						"h": 25
+					}
+				},
+				{
+					"filename": "blue-slime/walk-left/blue-slime-walk-left-12.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 28,
+						"h": 25
+					},
+					"frame": {
+						"x": 736,
+						"y": 227,
+						"w": 28,
+						"h": 25
+					}
+				},
+				{
+					"filename": "blue-slime/walk-left/blue-slime-walk-left-13.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 0,
+						"w": 28,
+						"h": 25
+					},
+					"frame": {
+						"x": 736,
+						"y": 227,
+						"w": 28,
+						"h": 25
+					}
+				},
+				{
+					"filename": "blue-slime/walk-left/blue-slime-walk-left-15.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 0,
+						"w": 28,
+						"h": 25
+					},
+					"frame": {
+						"x": 736,
+						"y": 227,
+						"w": 28,
+						"h": 25
+					}
+				},
+				{
+					"filename": "blue-slime/walk-left/blue-slime-walk-left-16.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 28,
+						"h": 25
+					},
+					"frame": {
+						"x": 736,
+						"y": 227,
+						"w": 28,
+						"h": 25
+					}
+				},
+				{
+					"filename": "blue-slime/walk-left/blue-slime-walk-left-17.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 5,
+						"w": 28,
+						"h": 25
+					},
+					"frame": {
+						"x": 736,
+						"y": 227,
+						"w": 28,
+						"h": 25
+					}
+				},
+				{
+					"filename": "blue-slime/walk-left/blue-slime-walk-left-10.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 8,
+						"w": 28,
+						"h": 24
+					},
+					"frame": {
+						"x": 736,
+						"y": 254,
+						"w": 28,
+						"h": 24
+					}
+				},
+				{
+					"filename": "blue-slime/walk-left/blue-slime-walk-left-18.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 8,
+						"w": 28,
+						"h": 24
+					},
+					"frame": {
+						"x": 736,
+						"y": 254,
+						"w": 28,
+						"h": 24
+					}
+				},
+				{
+					"filename": "blue-slime/walk-left/blue-slime-walk-left-14.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 0,
+						"w": 28,
+						"h": 24
+					},
+					"frame": {
+						"x": 768,
+						"y": 185,
+						"w": 28,
+						"h": 24
 					}
 				}
 			]
@@ -204,6 +729,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:2e323702be37333b2656f9ad887088cc:03957ad3600f58b8adf5875483d5652d:88db1022cd6b660616541d2788fcd4f7$"
+		"smartupdate": "$TexturePacker:SmartUpdate:e4cf0c9cf8078b52ca869e0de4aeefe0:6ee3efec56b428a09ef184b39401f720:88db1022cd6b660616541d2788fcd4f7$"
 	}
 }

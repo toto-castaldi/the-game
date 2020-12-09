@@ -1,8 +1,8 @@
-class Enemy extends Phaser.Physics.Arcade.Sprite {
+class BlueSlime extends Phaser.Physics.Arcade.Sprite {
 
     constructor (scene, x, y)
     {
-        super(scene, x, y, "texture",  "red_slime/idle/red_slime-idle-0.png");
+        super(scene, x, y, "texture",  "blue-slime/walk-left/blue-slime-walk-left-0.png");
 
         scene.add.existing(this);
         scene.physics.add.existing(this);
@@ -11,13 +11,25 @@ class Enemy extends Phaser.Physics.Arcade.Sprite {
 
         this.setDepth(1);
 
-        let frameNames = scene.anims.generateFrameNames('texture', {
+        /* let frameNames = scene.anims.generateFrameNames('texture', {
             start: 0, end: 4,
             prefix: 'red_slime/idle/red_slime-idle-', suffix: '.png'
+        }); */
+
+        scene.anims.create({ 
+            key: 'walk-left', 
+            frames: scene.anims.generateFrameNames('texture', {
+                start: 0, 
+                end: 24,
+                prefix: 'blue-slime/walk-left/blue-slime-walk-left-', 
+                suffix: '.png'
+            }), 
+            frameRate: 25, 
+            repeat: -1 
         });
 
-        scene.anims.create({ key: 'idle', frames: frameNames, frameRate: 5, repeat: -1 });
-        this.anims.play('idle');
+
+        this.anims.play('walk-left');
 
         this.direction = Directions.LEFT;
 

@@ -69,7 +69,7 @@
         "/home/toto/scm-projects/the-game/assets/level-00.json"
     ],
     "project": "the-game.tiled-project",
-    "property.type": "bool",
+    "property.type": "string",
     "recentFiles": [
         "/home/toto/scm-projects/the-game/assets/level-00.json",
         "level-00.json",
