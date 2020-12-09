@@ -11,11 +11,6 @@ class BlueSlime extends Phaser.Physics.Arcade.Sprite {
 
         this.setDepth(1);
 
-        /* let frameNames = scene.anims.generateFrameNames('texture', {
-            start: 0, end: 4,
-            prefix: 'red_slime/idle/red_slime-idle-', suffix: '.png'
-        }); */
-
         scene.anims.create({ 
             key: 'walk-left', 
             frames: scene.anims.generateFrameNames('texture', {
@@ -27,9 +22,42 @@ class BlueSlime extends Phaser.Physics.Arcade.Sprite {
             frameRate: 25, 
             repeat: -1 
         });
+        scene.anims.create({ 
+            key: 'walk-rigth', 
+            frames: scene.anims.generateFrameNames('texture', {
+                start: 0, 
+                end: 24,
+                prefix: 'blue-slime/walk-rigth/blue-slime-walk-rigth-', 
+                suffix: '.png'
+            }), 
+            frameRate: 25, 
+            repeat: -1 
+        });
+        scene.anims.create({ 
+            key: 'walk-down', 
+            frames: scene.anims.generateFrameNames('texture', {
+                start: 0, 
+                end: 23,
+                prefix: 'blue-slime/walk-down/blue-slime-walk-down-', 
+                suffix: '.png'
+            }), 
+            frameRate: 25, 
+            repeat: -1 
+        });
+        scene.anims.create({ 
+            key: 'walk-up', 
+            frames: scene.anims.generateFrameNames('texture', {
+                start: 0, 
+                end: 23,
+                prefix: 'blue-slime/walk-up/blue-slime-walk-up-', 
+                suffix: '.png'
+            }), 
+            frameRate: 25, 
+            repeat: -1 
+        });
 
 
-        this.anims.play('walk-left');
+        this.anims.play('walk-down');
 
         this.direction = Directions.LEFT;
 
@@ -58,15 +86,19 @@ class BlueSlime extends Phaser.Physics.Arcade.Sprite {
     setVelocityOnDirection() {
         switch (this.direction) {
             case Directions.LEFT:
+                this.anims.play('walk-left');
                 this.setVelocity(-100,0);
                 break;
             case Directions.RIGHT:
+                this.anims.play('walk-rigth');
                 this.setVelocity(+100,0);
                 break;
             case Directions.UP:
+                this.anims.play('walk-up');
                 this.setVelocity(0, -100);
                 break;
             case Directions.DOWN:
+                this.anims.play('walk-down');
                 this.setVelocity(0,100);
                 break;
         }
