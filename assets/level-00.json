@@ -65,7 +65,7 @@
                         {
                          "name":"enemyType",
                          "type":"string",
-                         "value":"red-slime"
+                         "value":"green-slime"
                         }],
                  "rotation":0,
                  "type":"",

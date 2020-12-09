@@ -86,19 +86,19 @@ class BlueSlime extends Phaser.Physics.Arcade.Sprite {
     setVelocityOnDirection() {
         switch (this.direction) {
             case Directions.LEFT:
-                this.anims.play('walk-left');
+                this.anims.play('walk-left', true);
                 this.setVelocity(-100,0);
                 break;
             case Directions.RIGHT:
-                this.anims.play('walk-rigth');
+                this.anims.play('walk-rigth', true);
                 this.setVelocity(+100,0);
                 break;
             case Directions.UP:
-                this.anims.play('walk-up');
+                this.anims.play('walk-up', true);
                 this.setVelocity(0, -100);
                 break;
             case Directions.DOWN:
-                this.anims.play('walk-down');
+                this.anims.play('walk-down', true);
                 this.setVelocity(0,100);
                 break;
         }

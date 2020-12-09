@@ -55,6 +55,9 @@ class Scene extends Phaser.Scene {
             if (enemyType === "blue-slime") {
                 this.enemies.add(new BlueSlime(this, object.x , object.y + deltaY));
             }
+            if (enemyType === "green-slime") {
+                this.enemies.add(new GreenSlime(this, object.x , object.y + deltaY));
+            }
         }, this);
 
         this.keys.w = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W);
