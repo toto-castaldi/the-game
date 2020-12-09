@@ -1,17 +1,17 @@
 class Player extends Phaser.Physics.Arcade.Sprite {
 
     constructor(scene, x, y) {
-        super(scene, x, y, "texture", "isaac.png");
+        super(scene, x, y, "texture", "isaac/walk-down/issac-PAUL-0.png");
 
         scene.add.existing(this);
         scene.physics.add.existing(this);
 
         this.setCollideWorldBounds(true);
 
-        this.setBodySize(200, 200, true).setOffset(90, 300);
+        this.displayWidth = 80;
+        this.displayHeight = 80;
+        this.setBodySize(10, 10, true).setOffset(10, 15);
 
-        this.displayWidth = scene.game.config.width * 0.065;
-        this.displayHeight = scene.game.config.height * 0.1;
         this.setDepth(1);
 
         this.energyLevel = gameOptions.startingPlayerEnergy;
@@ -25,6 +25,53 @@ class Player extends Phaser.Physics.Arcade.Sprite {
 
         this.damaging = DamageStates.IDLE;
         this.damageTime = 0;
+
+        scene.anims.create({ 
+            key: 'isaac-walk-down', 
+            frames: scene.anims.generateFrameNames('texture', {
+                start: 0, 
+                end: 1,
+                prefix: 'isaac/walk-down/issac-PAUL-', 
+                suffix: '.png'
+            }), 
+            frameRate: 5, 
+            repeat: -1 
+        });
+        scene.anims.create({ 
+            key: 'isaac-walk-up', 
+            frames: scene.anims.generateFrameNames('texture', {
+                start: 0, 
+                end: 1,
+                prefix: 'isaac/walk-up/issac-PAUL-', 
+                suffix: '.png'
+            }), 
+            frameRate: 5, 
+            repeat: -1 
+        });
+        scene.anims.create({ 
+            key: 'isaac-walk-left', 
+            frames: scene.anims.generateFrameNames('texture', {
+                start: 0, 
+                end: 1,
+                prefix: 'isaac/walk-left/issac-PAUL-', 
+                suffix: '.png'
+            }), 
+            frameRate: 5, 
+            repeat: -1 
+        });
+        scene.anims.create({ 
+            key: 'isaac-walk-right', 
+            frames: scene.anims.generateFrameNames('texture', {
+                start: 0, 
+                end: 1,
+                prefix: 'isaac/walk-right/issac-PAUL-', 
+                suffix: '.png'
+            }), 
+            frameRate: 5, 
+            repeat: -1 
+        });
+
+        this.anims.play('isaac-walk-down');
 
     }
 
@@ -89,18 +136,22 @@ class Player extends Phaser.Physics.Arcade.Sprite {
             this.setVelocity(0);
 
             if (keys.d.isDown) {
+                this.anims.play('isaac-walk-right', true);
                 this.setVelocityX(gameOptions.issacSpeedX);
             }
 
             if (keys.a.isDown) {
+                this.anims.play('isaac-walk-left', true);
                 this.setVelocityX(-gameOptions.issacSpeedX);
             }
 
             if (keys.s.isDown) {
+                this.anims.play('isaac-walk-down', true);
                 this.setVelocityY(gameOptions.issacSpeedY);
             }
 
             if (keys.w.isDown) {
+                this.anims.play('isaac-walk-up', true);
                 this.setVelocityY(-gameOptions.issacSpeedY);
             }
         }
