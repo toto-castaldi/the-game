@@ -14,7 +14,7 @@ const gameOptions = {
     minMillisTimeDeltaFire: 500,
     maximumPlayerEnergy : 6,
     startingPlayerEnergy : 4,
-    debug : true
+    debug : false
 }
 
 const game = new Phaser.Game({
