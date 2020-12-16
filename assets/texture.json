@@ -4,8 +4,8 @@
 			"image": "texture.png",
 			"format": "RGBA8888",
 			"size": {
-				"w": 1845,
-				"h": 944
+				"w": 506,
+				"h": 1654
 			},
 			"scale": 1,
 			"frames": [
@@ -31,24 +31,234 @@
 					}
 				},
 				{
-					"filename": "green-slime/walk/green-slime-walk-1.png",
+					"filename": "game-over.png",
 					"rotated": false,
-					"trimmed": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 640,
+						"h": 480
+					},
+					"spriteSourceSize": {
+						"x": 174,
+						"y": 165,
+						"w": 289,
+						"h": 182
+					},
+					"frame": {
+						"x": 1,
+						"y": 407,
+						"w": 289,
+						"h": 182
+					}
+				},
+				{
+					"filename": "green-slime/walk/green-slime-walk-6.png",
+					"rotated": false,
+					"trimmed": true,
 					"sourceSize": {
 						"w": 360,
 						"h": 360
 					},
 					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
+						"x": 77,
+						"y": 65,
+						"w": 213,
+						"h": 224
+					},
+					"frame": {
+						"x": 292,
+						"y": 407,
+						"w": 213,
+						"h": 224
+					}
+				},
+				{
+					"filename": "green-slime/walk/green-slime-walk-4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
 						"w": 360,
 						"h": 360
 					},
+					"spriteSourceSize": {
+						"x": 58,
+						"y": 83,
+						"w": 250,
+						"h": 206
+					},
 					"frame": {
 						"x": 1,
-						"y": 407,
+						"y": 591,
+						"w": 250,
+						"h": 206
+					}
+				},
+				{
+					"filename": "green-slime/walk/green-slime-walk-8.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
 						"w": 360,
 						"h": 360
+					},
+					"spriteSourceSize": {
+						"x": 58,
+						"y": 83,
+						"w": 249,
+						"h": 206
+					},
+					"frame": {
+						"x": 1,
+						"y": 799,
+						"w": 249,
+						"h": 206
+					}
+				},
+				{
+					"filename": "green-slime/walk/green-slime-walk-2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 360,
+						"h": 360
+					},
+					"spriteSourceSize": {
+						"x": 65,
+						"y": 71,
+						"w": 236,
+						"h": 218
+					},
+					"frame": {
+						"x": 1,
+						"y": 1007,
+						"w": 236,
+						"h": 218
+					}
+				},
+				{
+					"filename": "green-slime/walk/green-slime-walk-3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 360,
+						"h": 360
+					},
+					"spriteSourceSize": {
+						"x": 65,
+						"y": 77,
+						"w": 236,
+						"h": 212
+					},
+					"frame": {
+						"x": 1,
+						"y": 1227,
+						"w": 236,
+						"h": 212
+					}
+				},
+				{
+					"filename": "green-slime/walk/green-slime-walk-9.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 360,
+						"h": 360
+					},
+					"spriteSourceSize": {
+						"x": 65,
+						"y": 77,
+						"w": 237,
+						"h": 212
+					},
+					"frame": {
+						"x": 1,
+						"y": 1441,
+						"w": 237,
+						"h": 212
+					}
+				},
+				{
+					"filename": "green-slime/walk/green-slime-walk-1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 360,
+						"h": 360
+					},
+					"spriteSourceSize": {
+						"x": 70,
+						"y": 71,
+						"w": 226,
+						"h": 218
+					},
+					"frame": {
+						"x": 253,
+						"y": 633,
+						"w": 226,
+						"h": 218
+					}
+				},
+				{
+					"filename": "green-slime/walk/green-slime-walk-7.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 360,
+						"h": 360
+					},
+					"spriteSourceSize": {
+						"x": 70,
+						"y": 71,
+						"w": 226,
+						"h": 218
+					},
+					"frame": {
+						"x": 252,
+						"y": 853,
+						"w": 226,
+						"h": 218
+					}
+				},
+				{
+					"filename": "green-slime/walk/green-slime-walk-5.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 360,
+						"h": 360
+					},
+					"spriteSourceSize": {
+						"x": 71,
+						"y": 65,
+						"w": 224,
+						"h": 224
+					},
+					"frame": {
+						"x": 239,
+						"y": 1073,
+						"w": 224,
+						"h": 224
+					}
+				},
+				{
+					"filename": "green-slime/walk/green-slime-walk-0.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 360,
+						"h": 360
+					},
+					"spriteSourceSize": {
+						"x": 71,
+						"y": 71,
+						"w": 224,
+						"h": 218
+					},
+					"frame": {
+						"x": 240,
+						"y": 1299,
+						"w": 224,
+						"h": 218
 					}
 				},
 				{
@@ -66,8 +276,8 @@
 						"h": 34
 					},
 					"frame": {
-						"x": 1,
-						"y": 769,
+						"x": 398,
+						"y": 1,
 						"w": 36,
 						"h": 34
 					}
@@ -87,8 +297,8 @@
 						"h": 33
 					},
 					"frame": {
-						"x": 1,
-						"y": 805,
+						"x": 253,
+						"y": 591,
 						"w": 36,
 						"h": 33
 					}
@@ -108,8 +318,8 @@
 						"h": 33
 					},
 					"frame": {
-						"x": 1,
-						"y": 840,
+						"x": 240,
+						"y": 1519,
 						"w": 36,
 						"h": 33
 					}
@@ -129,8 +339,8 @@
 						"h": 33
 					},
 					"frame": {
-						"x": 1,
-						"y": 875,
+						"x": 398,
+						"y": 37,
 						"w": 36,
 						"h": 33
 					}
@@ -150,8 +360,8 @@
 						"h": 32
 					},
 					"frame": {
-						"x": 1,
-						"y": 910,
+						"x": 436,
+						"y": 1,
 						"w": 36,
 						"h": 32
 					}
@@ -171,8 +381,8 @@
 						"h": 32
 					},
 					"frame": {
-						"x": 39,
-						"y": 769,
+						"x": 240,
+						"y": 1554,
 						"w": 29,
 						"h": 32
 					}
@@ -192,8 +402,8 @@
 						"h": 25
 					},
 					"frame": {
-						"x": 39,
-						"y": 803,
+						"x": 278,
+						"y": 1519,
 						"w": 28,
 						"h": 25
 					}
@@ -213,8 +423,8 @@
 						"h": 25
 					},
 					"frame": {
-						"x": 39,
-						"y": 803,
+						"x": 278,
+						"y": 1519,
 						"w": 28,
 						"h": 25
 					}
@@ -234,8 +444,8 @@
 						"h": 25
 					},
 					"frame": {
-						"x": 39,
-						"y": 803,
+						"x": 278,
+						"y": 1519,
 						"w": 28,
 						"h": 25
 					}
@@ -255,8 +465,8 @@
 						"h": 25
 					},
 					"frame": {
-						"x": 39,
-						"y": 803,
+						"x": 278,
+						"y": 1519,
 						"w": 28,
 						"h": 25
 					}
@@ -276,8 +486,8 @@
 						"h": 25
 					},
 					"frame": {
-						"x": 39,
-						"y": 803,
+						"x": 278,
+						"y": 1519,
 						"w": 28,
 						"h": 25
 					}
@@ -297,8 +507,8 @@
 						"h": 25
 					},
 					"frame": {
-						"x": 39,
-						"y": 803,
+						"x": 278,
+						"y": 1519,
 						"w": 28,
 						"h": 25
 					}
@@ -318,8 +528,8 @@
 						"h": 25
 					},
 					"frame": {
-						"x": 39,
-						"y": 830,
+						"x": 398,
+						"y": 72,
 						"w": 28,
 						"h": 25
 					}
@@ -339,8 +549,8 @@
 						"h": 25
 					},
 					"frame": {
-						"x": 39,
-						"y": 830,
+						"x": 398,
+						"y": 72,
 						"w": 28,
 						"h": 25
 					}
@@ -360,8 +570,8 @@
 						"h": 25
 					},
 					"frame": {
-						"x": 39,
-						"y": 830,
+						"x": 398,
+						"y": 72,
 						"w": 28,
 						"h": 25
 					}
@@ -381,8 +591,8 @@
 						"h": 25
 					},
 					"frame": {
-						"x": 39,
-						"y": 830,
+						"x": 398,
+						"y": 72,
 						"w": 28,
 						"h": 25
 					}
@@ -402,8 +612,8 @@
 						"h": 25
 					},
 					"frame": {
-						"x": 39,
-						"y": 830,
+						"x": 398,
+						"y": 72,
 						"w": 28,
 						"h": 25
 					}
@@ -423,8 +633,8 @@
 						"h": 25
 					},
 					"frame": {
-						"x": 39,
-						"y": 830,
+						"x": 398,
+						"y": 72,
 						"w": 28,
 						"h": 25
 					}
@@ -444,8 +654,8 @@
 						"h": 25
 					},
 					"frame": {
-						"x": 39,
-						"y": 857,
+						"x": 436,
+						"y": 35,
 						"w": 28,
 						"h": 25
 					}
@@ -465,8 +675,8 @@
 						"h": 25
 					},
 					"frame": {
-						"x": 39,
-						"y": 857,
+						"x": 436,
+						"y": 35,
 						"w": 28,
 						"h": 25
 					}
@@ -486,8 +696,8 @@
 						"h": 25
 					},
 					"frame": {
-						"x": 39,
-						"y": 857,
+						"x": 436,
+						"y": 35,
 						"w": 28,
 						"h": 25
 					}
@@ -507,8 +717,8 @@
 						"h": 25
 					},
 					"frame": {
-						"x": 39,
-						"y": 857,
+						"x": 436,
+						"y": 35,
 						"w": 28,
 						"h": 25
 					}
@@ -528,8 +738,8 @@
 						"h": 25
 					},
 					"frame": {
-						"x": 39,
-						"y": 857,
+						"x": 436,
+						"y": 35,
 						"w": 28,
 						"h": 25
 					}
@@ -549,8 +759,8 @@
 						"h": 25
 					},
 					"frame": {
-						"x": 39,
-						"y": 857,
+						"x": 436,
+						"y": 35,
 						"w": 28,
 						"h": 25
 					}
@@ -570,8 +780,8 @@
 						"h": 25
 					},
 					"frame": {
-						"x": 39,
-						"y": 884,
+						"x": 474,
+						"y": 1,
 						"w": 28,
 						"h": 25
 					}
@@ -591,8 +801,8 @@
 						"h": 25
 					},
 					"frame": {
-						"x": 39,
-						"y": 884,
+						"x": 474,
+						"y": 1,
 						"w": 28,
 						"h": 25
 					}
@@ -612,8 +822,8 @@
 						"h": 25
 					},
 					"frame": {
-						"x": 39,
-						"y": 884,
+						"x": 474,
+						"y": 1,
 						"w": 28,
 						"h": 25
 					}
@@ -633,8 +843,8 @@
 						"h": 25
 					},
 					"frame": {
-						"x": 39,
-						"y": 884,
+						"x": 474,
+						"y": 1,
 						"w": 28,
 						"h": 25
 					}
@@ -654,8 +864,8 @@
 						"h": 25
 					},
 					"frame": {
-						"x": 39,
-						"y": 884,
+						"x": 474,
+						"y": 1,
 						"w": 28,
 						"h": 25
 					}
@@ -675,8 +885,8 @@
 						"h": 25
 					},
 					"frame": {
-						"x": 39,
-						"y": 884,
+						"x": 474,
+						"y": 1,
 						"w": 28,
 						"h": 25
 					}
@@ -696,8 +906,8 @@
 						"h": 24
 					},
 					"frame": {
-						"x": 39,
-						"y": 911,
+						"x": 240,
+						"y": 1588,
 						"w": 28,
 						"h": 24
 					}
@@ -717,8 +927,8 @@
 						"h": 24
 					},
 					"frame": {
-						"x": 39,
-						"y": 911,
+						"x": 240,
+						"y": 1588,
 						"w": 28,
 						"h": 24
 					}
@@ -738,8 +948,8 @@
 						"h": 24
 					},
 					"frame": {
-						"x": 69,
-						"y": 803,
+						"x": 308,
+						"y": 1519,
 						"w": 28,
 						"h": 24
 					}
@@ -759,8 +969,8 @@
 						"h": 24
 					},
 					"frame": {
-						"x": 70,
-						"y": 769,
+						"x": 398,
+						"y": 99,
 						"w": 28,
 						"h": 24
 					}
@@ -780,8 +990,8 @@
 						"h": 24
 					},
 					"frame": {
-						"x": 70,
-						"y": 769,
+						"x": 398,
+						"y": 99,
 						"w": 28,
 						"h": 24
 					}
@@ -801,8 +1011,8 @@
 						"h": 24
 					},
 					"frame": {
-						"x": 69,
-						"y": 829,
+						"x": 240,
+						"y": 1614,
 						"w": 28,
 						"h": 24
 					}
@@ -822,8 +1032,8 @@
 						"h": 24
 					},
 					"frame": {
-						"x": 69,
-						"y": 855,
+						"x": 338,
+						"y": 1519,
 						"w": 28,
 						"h": 24
 					}
@@ -843,8 +1053,8 @@
 						"h": 24
 					},
 					"frame": {
-						"x": 69,
-						"y": 855,
+						"x": 338,
+						"y": 1519,
 						"w": 28,
 						"h": 24
 					}
@@ -864,8 +1074,8 @@
 						"h": 24
 					},
 					"frame": {
-						"x": 69,
-						"y": 881,
+						"x": 398,
+						"y": 125,
 						"w": 28,
 						"h": 24
 					}
@@ -885,8 +1095,8 @@
 						"h": 24
 					},
 					"frame": {
-						"x": 69,
-						"y": 907,
+						"x": 368,
+						"y": 1519,
 						"w": 28,
 						"h": 24
 					}
@@ -906,8 +1116,8 @@
 						"h": 24
 					},
 					"frame": {
-						"x": 69,
-						"y": 907,
+						"x": 368,
+						"y": 1519,
 						"w": 28,
 						"h": 24
 					}
@@ -927,94 +1137,10 @@
 						"h": 24
 					},
 					"frame": {
-						"x": 99,
-						"y": 795,
+						"x": 398,
+						"y": 151,
 						"w": 28,
 						"h": 24
-					}
-				},
-				{
-					"filename": "isaac/walk-down/issac-PAUL-0.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 32
-					},
-					"spriteSourceSize": {
-						"x": 4,
-						"y": 5,
-						"w": 19,
-						"h": 20
-					},
-					"frame": {
-						"x": 100,
-						"y": 769,
-						"w": 19,
-						"h": 20
-					}
-				},
-				{
-					"filename": "isaac/walk-down/issac-PAUL-1.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 32
-					},
-					"spriteSourceSize": {
-						"x": 4,
-						"y": 5,
-						"w": 19,
-						"h": 20
-					},
-					"frame": {
-						"x": 121,
-						"y": 769,
-						"w": 19,
-						"h": 20
-					}
-				},
-				{
-					"filename": "isaac/walk-up/issac-PAUL-0.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 32
-					},
-					"spriteSourceSize": {
-						"x": 7,
-						"y": 5,
-						"w": 16,
-						"h": 20
-					},
-					"frame": {
-						"x": 99,
-						"y": 821,
-						"w": 16,
-						"h": 20
-					}
-				},
-				{
-					"filename": "isaac/walk-up/issac-PAUL-1.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 32
-					},
-					"spriteSourceSize": {
-						"x": 7,
-						"y": 5,
-						"w": 16,
-						"h": 20
-					},
-					"frame": {
-						"x": 99,
-						"y": 843,
-						"w": 16,
-						"h": 20
 					}
 				},
 				{
@@ -1032,8 +1158,8 @@
 						"h": 19
 					},
 					"frame": {
-						"x": 99,
-						"y": 865,
+						"x": 398,
+						"y": 1519,
 						"w": 30,
 						"h": 19
 					}
@@ -1053,8 +1179,8 @@
 						"h": 19
 					},
 					"frame": {
-						"x": 99,
-						"y": 865,
+						"x": 398,
+						"y": 1519,
 						"w": 30,
 						"h": 19
 					}
@@ -1074,8 +1200,8 @@
 						"h": 19
 					},
 					"frame": {
-						"x": 99,
-						"y": 865,
+						"x": 398,
+						"y": 1519,
 						"w": 30,
 						"h": 19
 					}
@@ -1095,8 +1221,8 @@
 						"h": 19
 					},
 					"frame": {
-						"x": 99,
-						"y": 865,
+						"x": 398,
+						"y": 1519,
 						"w": 30,
 						"h": 19
 					}
@@ -1116,8 +1242,8 @@
 						"h": 19
 					},
 					"frame": {
-						"x": 99,
-						"y": 865,
+						"x": 398,
+						"y": 1519,
 						"w": 30,
 						"h": 19
 					}
@@ -1137,8 +1263,8 @@
 						"h": 19
 					},
 					"frame": {
-						"x": 117,
-						"y": 821,
+						"x": 430,
+						"y": 1519,
 						"w": 30,
 						"h": 19
 					}
@@ -1158,8 +1284,8 @@
 						"h": 19
 					},
 					"frame": {
-						"x": 117,
-						"y": 842,
+						"x": 398,
+						"y": 177,
 						"w": 30,
 						"h": 19
 					}
@@ -1179,8 +1305,8 @@
 						"h": 19
 					},
 					"frame": {
-						"x": 117,
-						"y": 842,
+						"x": 398,
+						"y": 177,
 						"w": 30,
 						"h": 19
 					}
@@ -1200,8 +1326,8 @@
 						"h": 19
 					},
 					"frame": {
-						"x": 117,
-						"y": 842,
+						"x": 398,
+						"y": 177,
 						"w": 30,
 						"h": 19
 					}
@@ -1221,8 +1347,8 @@
 						"h": 19
 					},
 					"frame": {
-						"x": 117,
-						"y": 842,
+						"x": 398,
+						"y": 177,
 						"w": 30,
 						"h": 19
 					}
@@ -1242,8 +1368,8 @@
 						"h": 19
 					},
 					"frame": {
-						"x": 117,
-						"y": 842,
+						"x": 398,
+						"y": 177,
 						"w": 30,
 						"h": 19
 					}
@@ -1263,8 +1389,8 @@
 						"h": 19
 					},
 					"frame": {
-						"x": 129,
-						"y": 791,
+						"x": 398,
+						"y": 198,
 						"w": 30,
 						"h": 19
 					}
@@ -1284,8 +1410,8 @@
 						"h": 19
 					},
 					"frame": {
-						"x": 129,
-						"y": 791,
+						"x": 398,
+						"y": 198,
 						"w": 30,
 						"h": 19
 					}
@@ -1305,8 +1431,8 @@
 						"h": 19
 					},
 					"frame": {
-						"x": 142,
-						"y": 769,
+						"x": 398,
+						"y": 219,
 						"w": 30,
 						"h": 19
 					}
@@ -1326,8 +1452,8 @@
 						"h": 19
 					},
 					"frame": {
-						"x": 142,
-						"y": 769,
+						"x": 398,
+						"y": 219,
 						"w": 30,
 						"h": 19
 					}
@@ -1347,8 +1473,8 @@
 						"h": 19
 					},
 					"frame": {
-						"x": 142,
-						"y": 769,
+						"x": 398,
+						"y": 219,
 						"w": 30,
 						"h": 19
 					}
@@ -1368,8 +1494,8 @@
 						"h": 19
 					},
 					"frame": {
-						"x": 142,
-						"y": 769,
+						"x": 398,
+						"y": 219,
 						"w": 30,
 						"h": 19
 					}
@@ -1389,8 +1515,8 @@
 						"h": 19
 					},
 					"frame": {
-						"x": 142,
-						"y": 769,
+						"x": 398,
+						"y": 219,
 						"w": 30,
 						"h": 19
 					}
@@ -1410,8 +1536,8 @@
 						"h": 19
 					},
 					"frame": {
-						"x": 99,
-						"y": 886,
+						"x": 398,
+						"y": 240,
 						"w": 30,
 						"h": 19
 					}
@@ -1431,8 +1557,8 @@
 						"h": 19
 					},
 					"frame": {
-						"x": 99,
-						"y": 886,
+						"x": 398,
+						"y": 240,
 						"w": 30,
 						"h": 19
 					}
@@ -1452,8 +1578,8 @@
 						"h": 19
 					},
 					"frame": {
-						"x": 99,
-						"y": 907,
+						"x": 398,
+						"y": 261,
 						"w": 30,
 						"h": 19
 					}
@@ -1473,8 +1599,8 @@
 						"h": 19
 					},
 					"frame": {
-						"x": 99,
-						"y": 907,
+						"x": 398,
+						"y": 261,
 						"w": 30,
 						"h": 19
 					}
@@ -1494,8 +1620,8 @@
 						"h": 19
 					},
 					"frame": {
-						"x": 99,
-						"y": 907,
+						"x": 398,
+						"y": 261,
 						"w": 30,
 						"h": 19
 					}
@@ -1515,8 +1641,8 @@
 						"h": 19
 					},
 					"frame": {
-						"x": 99,
-						"y": 907,
+						"x": 398,
+						"y": 261,
 						"w": 30,
 						"h": 19
 					}
@@ -1536,94 +1662,10 @@
 						"h": 19
 					},
 					"frame": {
-						"x": 99,
-						"y": 907,
+						"x": 398,
+						"y": 261,
 						"w": 30,
 						"h": 19
-					}
-				},
-				{
-					"filename": "blue-slime/walk-down/blue-slime-walk-down-19.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 32
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 19,
-						"w": 32,
-						"h": 13
-					},
-					"frame": {
-						"x": 99,
-						"y": 928,
-						"w": 32,
-						"h": 13
-					}
-				},
-				{
-					"filename": "blue-slime/walk-down/blue-slime-walk-down-20.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 32
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 19,
-						"w": 32,
-						"h": 13
-					},
-					"frame": {
-						"x": 99,
-						"y": 928,
-						"w": 32,
-						"h": 13
-					}
-				},
-				{
-					"filename": "blue-slime/walk-down/blue-slime-walk-down-7.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 32
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 19,
-						"w": 32,
-						"h": 13
-					},
-					"frame": {
-						"x": 99,
-						"y": 928,
-						"w": 32,
-						"h": 13
-					}
-				},
-				{
-					"filename": "blue-slime/walk-down/blue-slime-walk-down-8.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 32
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 19,
-						"w": 32,
-						"h": 13
-					},
-					"frame": {
-						"x": 99,
-						"y": 928,
-						"w": 32,
-						"h": 13
 					}
 				},
 				{
@@ -1641,51 +1683,9 @@
 						"h": 19
 					},
 					"frame": {
-						"x": 131,
-						"y": 863,
+						"x": 398,
+						"y": 282,
 						"w": 30,
-						"h": 19
-					}
-				},
-				{
-					"filename": "isaac/walk-left/issac-PAUL-0.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 32
-					},
-					"spriteSourceSize": {
-						"x": 8,
-						"y": 6,
-						"w": 18,
-						"h": 19
-					},
-					"frame": {
-						"x": 131,
-						"y": 884,
-						"w": 18,
-						"h": 19
-					}
-				},
-				{
-					"filename": "isaac/walk-left/issac-PAUL-1.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 32
-					},
-					"spriteSourceSize": {
-						"x": 8,
-						"y": 6,
-						"w": 18,
-						"h": 19
-					},
-					"frame": {
-						"x": 131,
-						"y": 905,
-						"w": 18,
 						"h": 19
 					}
 				},
@@ -1704,8 +1704,8 @@
 						"h": 16
 					},
 					"frame": {
-						"x": 133,
-						"y": 926,
+						"x": 398,
+						"y": 303,
 						"w": 32,
 						"h": 16
 					}
@@ -1725,8 +1725,8 @@
 						"h": 16
 					},
 					"frame": {
-						"x": 133,
-						"y": 926,
+						"x": 398,
+						"y": 303,
 						"w": 32,
 						"h": 16
 					}
@@ -1746,8 +1746,8 @@
 						"h": 16
 					},
 					"frame": {
-						"x": 133,
-						"y": 926,
+						"x": 398,
+						"y": 303,
 						"w": 32,
 						"h": 16
 					}
@@ -1767,8 +1767,8 @@
 						"h": 16
 					},
 					"frame": {
-						"x": 133,
-						"y": 926,
+						"x": 398,
+						"y": 303,
 						"w": 32,
 						"h": 16
 					}
@@ -1788,52 +1788,10 @@
 						"h": 16
 					},
 					"frame": {
-						"x": 133,
-						"y": 926,
+						"x": 398,
+						"y": 303,
 						"w": 32,
 						"h": 16
-					}
-				},
-				{
-					"filename": "isaac/walk-right/issac-PAUL-0.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 32
-					},
-					"spriteSourceSize": {
-						"x": 5,
-						"y": 6,
-						"w": 18,
-						"h": 19
-					},
-					"frame": {
-						"x": 151,
-						"y": 884,
-						"w": 18,
-						"h": 19
-					}
-				},
-				{
-					"filename": "isaac/walk-right/issac-PAUL-1.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 32
-					},
-					"spriteSourceSize": {
-						"x": 5,
-						"y": 6,
-						"w": 18,
-						"h": 19
-					},
-					"frame": {
-						"x": 151,
-						"y": 905,
-						"w": 18,
-						"h": 19
 					}
 				},
 				{
@@ -1851,8 +1809,8 @@
 						"h": 16
 					},
 					"frame": {
-						"x": 167,
-						"y": 926,
+						"x": 398,
+						"y": 321,
 						"w": 32,
 						"h": 16
 					}
@@ -1872,8 +1830,8 @@
 						"h": 16
 					},
 					"frame": {
-						"x": 167,
-						"y": 926,
+						"x": 398,
+						"y": 321,
 						"w": 32,
 						"h": 16
 					}
@@ -1893,8 +1851,8 @@
 						"h": 16
 					},
 					"frame": {
-						"x": 167,
-						"y": 926,
+						"x": 398,
+						"y": 321,
 						"w": 32,
 						"h": 16
 					}
@@ -1914,8 +1872,8 @@
 						"h": 16
 					},
 					"frame": {
-						"x": 167,
-						"y": 926,
+						"x": 398,
+						"y": 321,
 						"w": 32,
 						"h": 16
 					}
@@ -1935,8 +1893,8 @@
 						"h": 16
 					},
 					"frame": {
-						"x": 167,
-						"y": 926,
+						"x": 398,
+						"y": 321,
 						"w": 32,
 						"h": 16
 					}
@@ -1956,8 +1914,8 @@
 						"h": 16
 					},
 					"frame": {
-						"x": 149,
-						"y": 812,
+						"x": 398,
+						"y": 339,
 						"w": 32,
 						"h": 16
 					}
@@ -1977,8 +1935,8 @@
 						"h": 16
 					},
 					"frame": {
-						"x": 149,
-						"y": 812,
+						"x": 398,
+						"y": 339,
 						"w": 32,
 						"h": 16
 					}
@@ -1998,8 +1956,8 @@
 						"h": 16
 					},
 					"frame": {
-						"x": 149,
-						"y": 812,
+						"x": 398,
+						"y": 339,
 						"w": 32,
 						"h": 16
 					}
@@ -2019,8 +1977,8 @@
 						"h": 16
 					},
 					"frame": {
-						"x": 149,
-						"y": 812,
+						"x": 398,
+						"y": 339,
 						"w": 32,
 						"h": 16
 					}
@@ -2040,8 +1998,8 @@
 						"h": 16
 					},
 					"frame": {
-						"x": 149,
-						"y": 812,
+						"x": 398,
+						"y": 339,
 						"w": 32,
 						"h": 16
 					}
@@ -2061,8 +2019,8 @@
 						"h": 16
 					},
 					"frame": {
-						"x": 161,
-						"y": 790,
+						"x": 398,
+						"y": 357,
 						"w": 32,
 						"h": 16
 					}
@@ -2082,8 +2040,8 @@
 						"h": 16
 					},
 					"frame": {
-						"x": 161,
-						"y": 790,
+						"x": 398,
+						"y": 357,
 						"w": 32,
 						"h": 16
 					}
@@ -2103,8 +2061,8 @@
 						"h": 16
 					},
 					"frame": {
-						"x": 161,
-						"y": 790,
+						"x": 398,
+						"y": 357,
 						"w": 32,
 						"h": 16
 					}
@@ -2124,8 +2082,8 @@
 						"h": 16
 					},
 					"frame": {
-						"x": 161,
-						"y": 790,
+						"x": 398,
+						"y": 357,
 						"w": 32,
 						"h": 16
 					}
@@ -2145,10 +2103,94 @@
 						"h": 16
 					},
 					"frame": {
-						"x": 161,
-						"y": 790,
+						"x": 398,
+						"y": 357,
 						"w": 32,
 						"h": 16
+					}
+				},
+				{
+					"filename": "blue-slime/walk-down/blue-slime-walk-down-19.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 19,
+						"w": 32,
+						"h": 13
+					},
+					"frame": {
+						"x": 398,
+						"y": 375,
+						"w": 32,
+						"h": 13
+					}
+				},
+				{
+					"filename": "blue-slime/walk-down/blue-slime-walk-down-20.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 19,
+						"w": 32,
+						"h": 13
+					},
+					"frame": {
+						"x": 398,
+						"y": 375,
+						"w": 32,
+						"h": 13
+					}
+				},
+				{
+					"filename": "blue-slime/walk-down/blue-slime-walk-down-7.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 19,
+						"w": 32,
+						"h": 13
+					},
+					"frame": {
+						"x": 398,
+						"y": 375,
+						"w": 32,
+						"h": 13
+					}
+				},
+				{
+					"filename": "blue-slime/walk-down/blue-slime-walk-down-8.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 19,
+						"w": 32,
+						"h": 13
+					},
+					"frame": {
+						"x": 398,
+						"y": 375,
+						"w": 32,
+						"h": 13
 					}
 				},
 				{
@@ -2166,8 +2208,8 @@
 						"h": 13
 					},
 					"frame": {
-						"x": 174,
-						"y": 769,
+						"x": 398,
+						"y": 390,
 						"w": 32,
 						"h": 13
 					}
@@ -2187,8 +2229,8 @@
 						"h": 13
 					},
 					"frame": {
-						"x": 174,
-						"y": 769,
+						"x": 398,
+						"y": 390,
 						"w": 32,
 						"h": 13
 					}
@@ -2208,8 +2250,8 @@
 						"h": 13
 					},
 					"frame": {
-						"x": 174,
-						"y": 769,
+						"x": 398,
+						"y": 390,
 						"w": 32,
 						"h": 13
 					}
@@ -2229,8 +2271,8 @@
 						"h": 13
 					},
 					"frame": {
-						"x": 174,
-						"y": 769,
+						"x": 398,
+						"y": 390,
 						"w": 32,
 						"h": 13
 					}
@@ -2250,8 +2292,8 @@
 						"h": 13
 					},
 					"frame": {
-						"x": 149,
-						"y": 830,
+						"x": 240,
+						"y": 1640,
 						"w": 32,
 						"h": 13
 					}
@@ -2271,8 +2313,8 @@
 						"h": 13
 					},
 					"frame": {
-						"x": 149,
-						"y": 830,
+						"x": 240,
+						"y": 1640,
 						"w": 32,
 						"h": 13
 					}
@@ -2292,8 +2334,8 @@
 						"h": 13
 					},
 					"frame": {
-						"x": 149,
-						"y": 830,
+						"x": 240,
+						"y": 1640,
 						"w": 32,
 						"h": 13
 					}
@@ -2313,10 +2355,136 @@
 						"h": 13
 					},
 					"frame": {
-						"x": 149,
-						"y": 830,
+						"x": 240,
+						"y": 1640,
 						"w": 32,
 						"h": 13
+					}
+				},
+				{
+					"filename": "isaac/walk-down/issac-PAUL-0.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 5,
+						"w": 19,
+						"h": 20
+					},
+					"frame": {
+						"x": 481,
+						"y": 633,
+						"w": 19,
+						"h": 20
+					}
+				},
+				{
+					"filename": "isaac/walk-down/issac-PAUL-1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 5,
+						"w": 19,
+						"h": 20
+					},
+					"frame": {
+						"x": 481,
+						"y": 655,
+						"w": 19,
+						"h": 20
+					}
+				},
+				{
+					"filename": "isaac/walk-left/issac-PAUL-0.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 6,
+						"w": 18,
+						"h": 19
+					},
+					"frame": {
+						"x": 481,
+						"y": 677,
+						"w": 18,
+						"h": 19
+					}
+				},
+				{
+					"filename": "isaac/walk-left/issac-PAUL-1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 6,
+						"w": 18,
+						"h": 19
+					},
+					"frame": {
+						"x": 481,
+						"y": 698,
+						"w": 18,
+						"h": 19
+					}
+				},
+				{
+					"filename": "isaac/walk-right/issac-PAUL-0.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 5,
+						"y": 6,
+						"w": 18,
+						"h": 19
+					},
+					"frame": {
+						"x": 481,
+						"y": 719,
+						"w": 18,
+						"h": 19
+					}
+				},
+				{
+					"filename": "isaac/walk-right/issac-PAUL-1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 5,
+						"y": 6,
+						"w": 18,
+						"h": 19
+					},
+					"frame": {
+						"x": 481,
+						"y": 740,
+						"w": 18,
+						"h": 19
 					}
 				},
 				{
@@ -2334,8 +2502,8 @@
 						"h": 13
 					},
 					"frame": {
-						"x": 149,
-						"y": 845,
+						"x": 436,
+						"y": 62,
 						"w": 32,
 						"h": 13
 					}
@@ -2355,8 +2523,8 @@
 						"h": 13
 					},
 					"frame": {
-						"x": 149,
-						"y": 845,
+						"x": 436,
+						"y": 62,
 						"w": 32,
 						"h": 13
 					}
@@ -2376,8 +2544,8 @@
 						"h": 13
 					},
 					"frame": {
-						"x": 149,
-						"y": 845,
+						"x": 436,
+						"y": 62,
 						"w": 32,
 						"h": 13
 					}
@@ -2397,220 +2565,52 @@
 						"h": 13
 					},
 					"frame": {
-						"x": 149,
-						"y": 845,
+						"x": 436,
+						"y": 62,
 						"w": 32,
 						"h": 13
 					}
 				},
 				{
-					"filename": "green-slime/walk/green-slime-walk-2.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 360,
-						"h": 360
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 360,
-						"h": 360
-					},
-					"frame": {
-						"x": 363,
-						"y": 407,
-						"w": 360,
-						"h": 360
-					}
-				},
-				{
-					"filename": "green-slime/walk/green-slime-walk-3.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 360,
-						"h": 360
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 360,
-						"h": 360
-					},
-					"frame": {
-						"x": 398,
-						"y": 1,
-						"w": 360,
-						"h": 360
-					}
-				},
-				{
-					"filename": "green-slime/walk/green-slime-walk-4.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 360,
-						"h": 360
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 360,
-						"h": 360
-					},
-					"frame": {
-						"x": 725,
-						"y": 363,
-						"w": 360,
-						"h": 360
-					}
-				},
-				{
-					"filename": "green-slime/walk/green-slime-walk-5.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 360,
-						"h": 360
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 360,
-						"h": 360
-					},
-					"frame": {
-						"x": 760,
-						"y": 1,
-						"w": 360,
-						"h": 360
-					}
-				},
-				{
-					"filename": "green-slime/walk/green-slime-walk-0.png",
+					"filename": "isaac/walk-up/issac-PAUL-0.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
-						"w": 360,
-						"h": 360
+						"w": 32,
+						"h": 32
 					},
 					"spriteSourceSize": {
-						"x": 71,
-						"y": 71,
-						"w": 224,
-						"h": 218
+						"x": 7,
+						"y": 5,
+						"w": 16,
+						"h": 20
 					},
 					"frame": {
-						"x": 725,
-						"y": 725,
-						"w": 224,
-						"h": 218
+						"x": 481,
+						"y": 761,
+						"w": 16,
+						"h": 20
 					}
 				},
 				{
-					"filename": "game-over.png",
+					"filename": "isaac/walk-up/issac-PAUL-1.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
-						"w": 640,
-						"h": 480
+						"w": 32,
+						"h": 32
 					},
 					"spriteSourceSize": {
-						"x": 174,
-						"y": 165,
-						"w": 289,
-						"h": 182
+						"x": 7,
+						"y": 5,
+						"w": 16,
+						"h": 20
 					},
 					"frame": {
-						"x": 951,
-						"y": 725,
-						"w": 289,
-						"h": 182
-					}
-				},
-				{
-					"filename": "green-slime/walk/green-slime-walk-6.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 360,
-						"h": 360
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 360,
-						"h": 360
-					},
-					"frame": {
-						"x": 1087,
-						"y": 363,
-						"w": 360,
-						"h": 360
-					}
-				},
-				{
-					"filename": "green-slime/walk/green-slime-walk-7.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 360,
-						"h": 360
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 360,
-						"h": 360
-					},
-					"frame": {
-						"x": 1122,
-						"y": 1,
-						"w": 360,
-						"h": 360
-					}
-				},
-				{
-					"filename": "green-slime/walk/green-slime-walk-8.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 360,
-						"h": 360
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 360,
-						"h": 360
-					},
-					"frame": {
-						"x": 1484,
-						"y": 1,
-						"w": 360,
-						"h": 360
-					}
-				},
-				{
-					"filename": "green-slime/walk/green-slime-walk-9.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 360,
-						"h": 360
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 360,
-						"h": 360
-					},
-					"frame": {
-						"x": 1449,
-						"y": 363,
-						"w": 360,
-						"h": 360
+						"x": 481,
+						"y": 783,
+						"w": 16,
+						"h": 20
 					}
 				}
 			]
@@ -2619,6 +2619,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:cf37c2259cd4e4e6d1643820205cdd86:d88d0ba3360bc931f14658521c385ff7:88db1022cd6b660616541d2788fcd4f7$"
+		"smartupdate": "$TexturePacker:SmartUpdate:5aea02ba9d31b33facc4b94be928a121:c7c84b4510927dae87eefcaa948b107e:88db1022cd6b660616541d2788fcd4f7$"
 	}
 }

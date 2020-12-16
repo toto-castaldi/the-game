@@ -181,6 +181,126 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-down/blue-slime-walk-down-0.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-down/blue-slime-walk-down-1.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-down/blue-slime-walk-down-10.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-down/blue-slime-walk-down-11.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-down/blue-slime-walk-down-12.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-down/blue-slime-walk-down-13.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-down/blue-slime-walk-down-14.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-down/blue-slime-walk-down-15.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-down/blue-slime-walk-down-16.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-down/blue-slime-walk-down-17.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-down/blue-slime-walk-down-18.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-down/blue-slime-walk-down-19.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-down/blue-slime-walk-down-2.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-down/blue-slime-walk-down-20.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-down/blue-slime-walk-down-21.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-down/blue-slime-walk-down-22.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-down/blue-slime-walk-down-23.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-down/blue-slime-walk-down-3.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-down/blue-slime-walk-down-4.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-down/blue-slime-walk-down-5.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-down/blue-slime-walk-down-6.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-down/blue-slime-walk-down-7.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-down/blue-slime-walk-down-8.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-down/blue-slime-walk-down-9.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-left/blue-slime-walk-left-0.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-left/blue-slime-walk-left-1.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-left/blue-slime-walk-left-10.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-left/blue-slime-walk-left-11.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-left/blue-slime-walk-left-12.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-left/blue-slime-walk-left-13.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-left/blue-slime-walk-left-14.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-left/blue-slime-walk-left-15.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-left/blue-slime-walk-left-16.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-left/blue-slime-walk-left-17.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-left/blue-slime-walk-left-18.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-left/blue-slime-walk-left-19.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-left/blue-slime-walk-left-2.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-left/blue-slime-walk-left-20.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-left/blue-slime-walk-left-21.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-left/blue-slime-walk-left-22.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-left/blue-slime-walk-left-23.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-left/blue-slime-walk-left-24.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-left/blue-slime-walk-left-3.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-left/blue-slime-walk-left-4.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-left/blue-slime-walk-left-5.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-left/blue-slime-walk-left-6.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-left/blue-slime-walk-left-7.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-left/blue-slime-walk-left-8.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-left/blue-slime-walk-left-9.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-rigth/blue-slime-walk-rigth-0.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-rigth/blue-slime-walk-rigth-1.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-rigth/blue-slime-walk-rigth-10.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-rigth/blue-slime-walk-rigth-11.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-rigth/blue-slime-walk-rigth-12.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-rigth/blue-slime-walk-rigth-13.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-rigth/blue-slime-walk-rigth-14.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-rigth/blue-slime-walk-rigth-15.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-rigth/blue-slime-walk-rigth-16.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-rigth/blue-slime-walk-rigth-17.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-rigth/blue-slime-walk-rigth-18.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-rigth/blue-slime-walk-rigth-19.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-rigth/blue-slime-walk-rigth-2.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-rigth/blue-slime-walk-rigth-20.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-rigth/blue-slime-walk-rigth-21.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-rigth/blue-slime-walk-rigth-22.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-rigth/blue-slime-walk-rigth-23.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-rigth/blue-slime-walk-rigth-24.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-rigth/blue-slime-walk-rigth-3.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-rigth/blue-slime-walk-rigth-4.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-rigth/blue-slime-walk-rigth-5.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-rigth/blue-slime-walk-rigth-6.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-rigth/blue-slime-walk-rigth-7.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-rigth/blue-slime-walk-rigth-8.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-rigth/blue-slime-walk-rigth-9.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-up/blue-slime-walk-up-0.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-up/blue-slime-walk-up-1.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-up/blue-slime-walk-up-10.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-up/blue-slime-walk-up-11.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-up/blue-slime-walk-up-12.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-up/blue-slime-walk-up-13.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-up/blue-slime-walk-up-14.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-up/blue-slime-walk-up-15.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-up/blue-slime-walk-up-16.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-up/blue-slime-walk-up-17.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-up/blue-slime-walk-up-18.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-up/blue-slime-walk-up-19.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-up/blue-slime-walk-up-2.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-up/blue-slime-walk-up-20.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-up/blue-slime-walk-up-21.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-up/blue-slime-walk-up-22.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-up/blue-slime-walk-up-23.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-up/blue-slime-walk-up-3.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-up/blue-slime-walk-up-4.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-up/blue-slime-walk-up-5.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-up/blue-slime-walk-up-6.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-up/blue-slime-walk-up-7.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-up/blue-slime-walk-up-8.png</key>
+            <key type="filename">../assets/tp-smart-folder/blue-slime/walk-up/blue-slime-walk-up-9.png</key>
+            <key type="filename">../assets/tp-smart-folder/isaac/walk-down/issac-PAUL-0.png</key>
+            <key type="filename">../assets/tp-smart-folder/isaac/walk-down/issac-PAUL-1.png</key>
+            <key type="filename">../assets/tp-smart-folder/isaac/walk-left/issac-PAUL-0.png</key>
+            <key type="filename">../assets/tp-smart-folder/isaac/walk-left/issac-PAUL-1.png</key>
+            <key type="filename">../assets/tp-smart-folder/isaac/walk-right/issac-PAUL-0.png</key>
+            <key type="filename">../assets/tp-smart-folder/isaac/walk-right/issac-PAUL-1.png</key>
+            <key type="filename">../assets/tp-smart-folder/isaac/walk-up/issac-PAUL-0.png</key>
+            <key type="filename">../assets/tp-smart-folder/isaac/walk-up/issac-PAUL-1.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>8,8,16,16</rect>
+                <key>scale9Paddings</key>
+                <rect>8,8,16,16</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">../assets/tp-smart-folder/bullet.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
@@ -211,6 +331,30 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
+            <key type="filename">../assets/tp-smart-folder/green-slime/walk/green-slime-walk-0.png</key>
+            <key type="filename">../assets/tp-smart-folder/green-slime/walk/green-slime-walk-1.png</key>
+            <key type="filename">../assets/tp-smart-folder/green-slime/walk/green-slime-walk-2.png</key>
+            <key type="filename">../assets/tp-smart-folder/green-slime/walk/green-slime-walk-3.png</key>
+            <key type="filename">../assets/tp-smart-folder/green-slime/walk/green-slime-walk-4.png</key>
+            <key type="filename">../assets/tp-smart-folder/green-slime/walk/green-slime-walk-5.png</key>
+            <key type="filename">../assets/tp-smart-folder/green-slime/walk/green-slime-walk-6.png</key>
+            <key type="filename">../assets/tp-smart-folder/green-slime/walk/green-slime-walk-7.png</key>
+            <key type="filename">../assets/tp-smart-folder/green-slime/walk/green-slime-walk-8.png</key>
+            <key type="filename">../assets/tp-smart-folder/green-slime/walk/green-slime-walk-9.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>90,90,180,180</rect>
+                <key>scale9Paddings</key>
+                <rect>90,90,180,180</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">../assets/tp-smart-folder/heart.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
@@ -223,21 +367,6 @@
                 <rect>12,12,24,24</rect>
                 <key>scale9Paddings</key>
                 <rect>12,12,24,24</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../assets/tp-smart-folder/isaac.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>96,131,191,262</rect>
-                <key>scale9Paddings</key>
-                <rect>96,131,191,262</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
