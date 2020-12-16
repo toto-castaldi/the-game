@@ -49,14 +49,20 @@ class Scene extends Phaser.Scene {
 
         this.map.filterObjects("enemy-spawn", function (object) {
             let enemyType = object.properties.filter(prop => prop.name == "enemyType")[0].value;
-            if (enemyType === "red-slime") {
-                this.enemies.add(new RedSlime(this, object.x , object.y + deltaY));
-            }
-            if (enemyType === "blue-slime") {
-                this.enemies.add(new BlueSlime(this, object.x , object.y + deltaY));
-            }
-            if (enemyType === "green-slime") {
-                this.enemies.add(new GreenSlime(this, object.x , object.y + deltaY));
+            switch (enemyType) {
+                case "red-slime":
+                    this.enemies.add(new RedSlime(this, object.x, object.y + deltaY));
+                    break;
+                case "blue-slime":
+                    this.enemies.add(new BlueSlime(this, object.x, object.y + deltaY));
+                    break;
+                case "green-slime":
+                    this.enemies.add(new GreenSlime(this, object.x, object.y + deltaY));
+                    break;
+                case "worm":
+                    this.enemies.add(new Worm(this, object.x, object.y + deltaY));
+                    break;
+
             }
         }, this);
 
@@ -78,7 +84,7 @@ class Scene extends Phaser.Scene {
 
         this.physics.add.collider(this.bullets, this.baseLayer, this.bulletCollide, null, this);
         this.physics.add.collider(this.bullets, this.rockLayer, this.bulletCollide, null, this);
-        
+
 
         this.physics.add.collider(this.enemies, this.player, (player, enemy) => {
             player.handleDamage(enemy);
@@ -99,24 +105,24 @@ class Scene extends Phaser.Scene {
         if (gameOptions.debug) {
             const debugGraphics = this.add.graphics().setAlpha(0.75);
             const debugOptions = {
-                tileColor: null, 
-                collidingTileColor: new Phaser.Display.Color(243, 134, 48, 255), 
-                faceColor: new Phaser.Display.Color(40, 39, 37, 255) 
+                tileColor: null,
+                collidingTileColor: new Phaser.Display.Color(243, 134, 48, 255),
+                faceColor: new Phaser.Display.Color(40, 39, 37, 255)
             };
             //this.baseLayer.renderDebug(debugGraphics, debugOptions);
             this.rockLayer.renderDebug(debugGraphics, debugOptions);
         }
 
-        this.anims.create({ 
-            key: 'weapon-shuriken', 
+        this.anims.create({
+            key: 'weapon-shuriken',
             frames: this.anims.generateFrameNames('texture', {
-                start: 0, 
+                start: 0,
                 end: 1,
-                prefix: 'weapon/shuriken/shuriken_', 
+                prefix: 'weapon/shuriken/shuriken_',
                 suffix: '.gif'
-            }), 
-            frameRate: 60, 
-            repeat: -1 
+            }),
+            frameRate: 60,
+            repeat: -1
         });
     }
 
@@ -139,8 +145,6 @@ class Scene extends Phaser.Scene {
                 this.lastFire = time;
             } else if (this.bullets.countActive() < gameOptions.bulletCount) {
                 let bullet = this.bullets.create(this.player.x, this.player.y, "texture", "weapon/shuriken/shuriken_1.gif");
-                /* bullet.displayWidth = this.game.config.width / 15;
-                bullet.displayHeight = this.game.config.height / 15; */
                 bullet.setBodySize(15, 15, true);
                 bullet.anims.play("weapon-shuriken");
                 bullet.setCollideWorldBounds(true);
@@ -155,7 +159,7 @@ class Scene extends Phaser.Scene {
 
         if (this.playing) {
             this.player.move({
-                keys : this.keys
+                keys: this.keys
             });
 
             if (this.keys.left.isDown) {
@@ -171,7 +175,7 @@ class Scene extends Phaser.Scene {
                 this.fire(0, +gameOptions.bulletSpeedY, time);
             }
         } else {
-            this.player.setVelocity(0,0);
+            this.player.setVelocity(0, 0);
         }
     }
 }

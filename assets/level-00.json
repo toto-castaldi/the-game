@@ -47,7 +47,7 @@
                         {
                          "name":"enemyType",
                          "type":"string",
-                         "value":"blue-slime"
+                         "value":"worm"
                         }],
                  "rotation":0,
                  "type":"",
