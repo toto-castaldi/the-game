@@ -7,7 +7,7 @@ class GreenSlime extends Phaser.Physics.Arcade.Sprite {
         scene.add.existing(this);
         scene.physics.add.existing(this);
 
-        this.setBodySize(200, 200, true);//.setOffset(10, 15);
+        this.setBodySize(200, 200, true);
         this.displayWidth = 50;
         this.displayHeight = 50;
         

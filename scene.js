@@ -106,6 +106,18 @@ class Scene extends Phaser.Scene {
             //this.baseLayer.renderDebug(debugGraphics, debugOptions);
             this.rockLayer.renderDebug(debugGraphics, debugOptions);
         }
+
+        this.anims.create({ 
+            key: 'weapon-shuriken', 
+            frames: this.anims.generateFrameNames('texture', {
+                start: 0, 
+                end: 1,
+                prefix: 'weapon/shuriken/shuriken_', 
+                suffix: '.gif'
+            }), 
+            frameRate: 60, 
+            repeat: -1 
+        });
     }
 
     enemyCollide(enemy, element) {
@@ -126,9 +138,11 @@ class Scene extends Phaser.Scene {
                 inactiveBullet.setVelocity(velocityX, velocityY);
                 this.lastFire = time;
             } else if (this.bullets.countActive() < gameOptions.bulletCount) {
-                let bullet = this.bullets.create(this.player.x, this.player.y, "texture", "bullet");
-                bullet.displayWidth = this.game.config.width / 15;
-                bullet.displayHeight = this.game.config.height / 15;
+                let bullet = this.bullets.create(this.player.x, this.player.y, "texture", "weapon/shuriken/shuriken_1.gif");
+                /* bullet.displayWidth = this.game.config.width / 15;
+                bullet.displayHeight = this.game.config.height / 15; */
+                bullet.setBodySize(15, 15, true);
+                bullet.anims.play("weapon-shuriken");
                 bullet.setCollideWorldBounds(true);
                 bullet.setVelocity(velocityX, velocityY);
                 this.lastFire = time;
