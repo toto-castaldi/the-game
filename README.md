@@ -41,3 +41,4 @@ risoluzione 800*600
 - combinare armi per generare nuove armi
 - punti 
 - boss figth !
+- nemici che sparano

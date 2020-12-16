@@ -1,8 +1,7 @@
 class Worm extends Phaser.Physics.Arcade.Sprite {
 
-    constructor (scene, x, y)
-    {
-        super(scene, x, y, "texture",  "enemy/sworm/walk-right/worm-walk-right-0.png");
+    constructor(scene, x, y) {
+        super(scene, x, y, "texture", "enemy/sworm/walk-right/worm-walk-right-0.png");
 
         scene.add.existing(this);
         scene.physics.add.existing(this);
@@ -13,16 +12,16 @@ class Worm extends Phaser.Physics.Arcade.Sprite {
 
         this.setDepth(1);
 
-        scene.anims.create({ 
-            key: 'enemy-worm-walk-right', 
+        scene.anims.create({
+            key: 'enemy-worm-walk-right',
             frames: scene.anims.generateFrameNames('texture', {
-                start: 0, 
+                start: 0,
                 end: 8,
-                prefix: 'enemy/sworm/walk-right/worm-walk-right-', 
+                prefix: 'enemy/sworm/walk-right/worm-walk-right-',
                 suffix: '.png'
-            }), 
-            frameRate: 2, 
-            repeat: -1 
+            }),
+            frameRate: 2,
+            repeat: -1
         });
 
 
@@ -31,13 +30,13 @@ class Worm extends Phaser.Physics.Arcade.Sprite {
         this.direction = Directions.LEFT;
 
         this.setVelocityOnDirection();
-        
+
         this.timeMoveEvent = scene.time.addEvent({
-            delay : 2000,
-            callback : () => {
+            delay: 2000,
+            callback: () => {
                 this.changeDirection();
             },
-            loop : true
+            loop: true
         });
     }
 
@@ -47,24 +46,25 @@ class Worm extends Phaser.Physics.Arcade.Sprite {
         super.destroy(fromScene);
     }
 
-    changeDirection () {
+    changeDirection() {
         this.direction = Directions.randomChange(this.direction);
         this.setVelocityOnDirection();
     }
 
     setVelocityOnDirection() {
+        const speed = 30;
         switch (this.direction) {
             case Directions.LEFT:
-                this.setVelocity(-100,0);
+                this.setVelocity(-speed, 0);
                 break;
             case Directions.RIGHT:
-                this.setVelocity(+100,0);
+                this.setVelocity(speed, 0);
                 break;
             case Directions.UP:
-                this.setVelocity(0, -100);
+                this.setVelocity(0, -speed);
                 break;
             case Directions.DOWN:
-                this.setVelocity(0,100);
+                this.setVelocity(0, speed);
                 break;
         }
 
