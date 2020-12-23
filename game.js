@@ -22,7 +22,7 @@ const game = new Phaser.Game({
     backgroundColor: 0x000000,
     width: 800,
     height: 600,
-    scene: [Loader, Scene],
+    scene: [Loader, Level00, Level01],
     parent: "the-game",
     physics: {
         default: "arcade",

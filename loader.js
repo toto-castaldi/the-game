@@ -14,11 +14,12 @@ class Loader extends Phaser.Scene {
 
         //'tiles' è una chiava usata successivamente.
         this.load.image("tiles", "assets/tiled.png");
-        //'map' è una chiava usata successivamente. level-00.json è il file salvato da Tiled
-        this.load.tilemapTiledJSON("map", "assets/level-00.json");
+        //'leve-00' è una chiava usata successivamente. level-00.json è il file salvato da Tiled
+        this.load.tilemapTiledJSON("level-00", "assets/level-00.json");
+        this.load.tilemapTiledJSON("level-01", "assets/level-01.json");
     }
 
     create() {
-        this.scene.start('Scene');   
+        this.scene.start('Level00');   
     }
 }

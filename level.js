@@ -1,9 +1,10 @@
-class Scene extends Phaser.Scene {
+class Level extends Phaser.Scene {
 
-    constructor() {
-        super({
-            key: "Scene"
-        })
+    constructor(conf, mapName, nextLevel) {
+        super(conf)
+        this.mapName = mapName;
+        this.currentLevel = conf.key;
+        this.nextLevel = nextLevel;
 
         this.playing = true;
         this.keys = {};
@@ -19,14 +20,18 @@ class Scene extends Phaser.Scene {
 
     restart() {
         this.playing = true;
-        this.scene.start('Scene');
+        this.scene.start(this.currentLevel);
+    }
+
+    startNextLevel() {
+        this.scene.start(this.nextLevel);
     }
 
     create() {
         const deltaY = this.game.config.height - 16 * 32;
 
         //'map' è definita in caricamento con load.tilemapTiledJSON
-        this.map = this.make.tilemap({ key: "map" });
+        this.map = this.make.tilemap({ key: this.mapName });
 
         //'tiled' è definito come tileset in Tiled. 'tiles' è definita in caricamento con load.image
         this.map.addTilesetImage("tiled", "tiles");
@@ -90,9 +95,14 @@ class Scene extends Phaser.Scene {
             player.handleDamage(enemy);
         }, null);
 
+        //nemici colpiti da proiettile
         this.physics.add.collider(this.bullets, this.enemies, (bullet, enemy) => {
             bullet.disableBody(true, true);
             enemy.disableBody(true, true);
+
+            if (this.enemies.countActive() == 0) {
+                this.startNextLevel();
+            }
         }, null);
 
 
