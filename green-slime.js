@@ -1,6 +1,6 @@
 class GreenSlime extends Phaser.Physics.Arcade.Sprite {
 
-    constructor(scene, x, y) {
+    constructor(scene, x, y, player) {
         super(scene, x, y, "texture", "green-slime/walk/green-slime-walk-1.png");
 
         scene.add.existing(this);
@@ -29,48 +29,20 @@ class GreenSlime extends Phaser.Physics.Arcade.Sprite {
 
         this.anims.play('green-slime-walk');
 
-        this.direction = Directions.LEFT;
+        this.scene = scene;
 
-        this.setVelocityOnDirection();
+        this.player = player;
 
-        this.timeMoveEvent = scene.time.addEvent({
-            delay: 2000,
-            callback: () => {
-                this.changeDirection();
-            },
-            loop: true
-        });
     }
 
-    destroy(fromScene) {
-        this.timeMoveEvent.destroy();
+    preUpdate(time, delta) {
+        this.scene.physics.moveToObject(this, this.player, 150);
 
-        super.destroy(fromScene);
+        super.preUpdate(time, delta);
     }
 
     changeDirection() {
-        this.direction = Directions.randomChange(this.direction);
-        this.setVelocityOnDirection();
-    }
-
-    setVelocityOnDirection() {
-        const speed = 150;
-        switch (this.direction) {
-            case Directions.LEFT:
-                this.setVelocity(-speed, 0);
-                break;
-            case Directions.RIGHT:
-                this.setVelocity(speed, 0);
-                break;
-            case Directions.UP:
-                this.setVelocity(0, -speed);
-                break;
-            case Directions.DOWN:
-                this.setVelocity(0, speed);
-                break;
-        }
 
     }
-
 
 }

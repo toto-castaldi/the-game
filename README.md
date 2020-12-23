@@ -26,7 +26,6 @@ risoluzione 800*600
 
 ## DA FARE
 
-- i nemici si muovono in modo differente (per es: possono andare verso il giocatore)
 - aggiungere suoni
 - aggiungere musica
 - schermata delle opzioni

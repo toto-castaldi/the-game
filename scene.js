@@ -57,7 +57,7 @@ class Scene extends Phaser.Scene {
                     this.enemies.add(new BlueSlime(this, object.x, object.y + deltaY));
                     break;
                 case "green-slime":
-                    this.enemies.add(new GreenSlime(this, object.x, object.y + deltaY));
+                    this.enemies.add(new GreenSlime(this, object.x, object.y + deltaY, this.player));
                     break;
                 case "worm":
                     this.enemies.add(new Worm(this, object.x, object.y + deltaY));
@@ -156,6 +156,8 @@ class Scene extends Phaser.Scene {
     }
 
     update(time, update) {
+
+        
 
         if (this.playing) {
             this.player.move({

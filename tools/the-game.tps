@@ -287,6 +287,8 @@
             <key type="filename">../assets/tp-smart-folder/isaac/walk-right/issac-PAUL-1.png</key>
             <key type="filename">../assets/tp-smart-folder/isaac/walk-up/issac-PAUL-0.png</key>
             <key type="filename">../assets/tp-smart-folder/isaac/walk-up/issac-PAUL-1.png</key>
+            <key type="filename">../assets/tp-smart-folder/weapon/shuriken/shuriken_0.gif</key>
+            <key type="filename">../assets/tp-smart-folder/weapon/shuriken/shuriken_1.gif</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -301,7 +303,15 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../assets/tp-smart-folder/bullet.png</key>
+            <key type="filename">../assets/tp-smart-folder/enemy/sworm/walk-right/worm-walk-right-0.png</key>
+            <key type="filename">../assets/tp-smart-folder/enemy/sworm/walk-right/worm-walk-right-1.png</key>
+            <key type="filename">../assets/tp-smart-folder/enemy/sworm/walk-right/worm-walk-right-2.png</key>
+            <key type="filename">../assets/tp-smart-folder/enemy/sworm/walk-right/worm-walk-right-3.png</key>
+            <key type="filename">../assets/tp-smart-folder/enemy/sworm/walk-right/worm-walk-right-4.png</key>
+            <key type="filename">../assets/tp-smart-folder/enemy/sworm/walk-right/worm-walk-right-5.png</key>
+            <key type="filename">../assets/tp-smart-folder/enemy/sworm/walk-right/worm-walk-right-6.png</key>
+            <key type="filename">../assets/tp-smart-folder/enemy/sworm/walk-right/worm-walk-right-7.png</key>
+            <key type="filename">../assets/tp-smart-folder/enemy/sworm/walk-right/worm-walk-right-8.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -310,9 +320,9 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>99,101,197,202</rect>
+                <rect>16,16,32,32</rect>
                 <key>scale9Paddings</key>
-                <rect>99,101,197,202</rect>
+                <rect>16,16,32,32</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
