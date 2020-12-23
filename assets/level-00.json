@@ -109,6 +109,24 @@
                  "width":0,
                  "x":180.007758955127,
                  "y":141.730246993405
+                }, 
+                {
+                 "height":0,
+                 "id":11,
+                 "name":"",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"enemyType",
+                         "type":"string",
+                         "value":"green-slime"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":530.712530712531,
+                 "y":245.182982025087
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -117,7 +135,7 @@
          "y":0
         }],
  "nextlayerid":5,
- "nextobjectid":11,
+ "nextobjectid":12,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",
