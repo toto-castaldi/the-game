@@ -30,7 +30,6 @@ risoluzione 800*600
 - aggiungere musica
 - schermata delle opzioni
 - schermata iniziale
-- pubblicare gioco online
 - rendere l'applicazione eseguile su desktop Windows
 - mostrare energia dei nemici
 - più livelli (progettati con Tiled) in ordine casuale
@@ -41,3 +40,6 @@ risoluzione 800*600
 - punti 
 - boss figth !
 - nemici che sparano
+- animazione porte
+- su cellulare si vede male
+- pubblicare gioco online

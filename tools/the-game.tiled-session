@@ -16,13 +16,24 @@
         },
         "/home/toto/scm-projects/the-game/assets/level-00.json": {
             "scale": 0.9666250000000001,
-            "selectedLayer": 2,
+            "selectedLayer": 0,
             "viewCenter": {
-                "x": 398.29302987197724,
+                "x": 388.46502004396734,
                 "y": 257.59731022888917
             }
         },
         "/home/toto/scm-projects/the-game/assets/level-00.json#tiled": {
+            "scaleInDock": 1
+        },
+        "/home/toto/scm-projects/the-game/assets/level-01.json": {
+            "scale": 0.9666250000000001,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 411.22462175093756,
+                "y": 257.59731022888917
+            }
+        },
+        "/home/toto/scm-projects/the-game/assets/level-01.json#tiled": {
             "scaleInDock": 1
         },
         "/home/toto/scm-projects/the-game/assets/tiles.tsx": {

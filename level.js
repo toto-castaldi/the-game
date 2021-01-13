@@ -24,11 +24,27 @@ class Level extends Phaser.Scene {
     }
 
     startNextLevel() {
-        this.scene.start(this.nextLevel);
+        const door = this.add.sprite(this.game.config.width / 2 - 16, this.deltaY + 100, "texture", "doors/up/door-up-0.png");
+        this.physics.add.existing(door);
+        this.anims.create({
+            key: 'door-up-open',
+            frames: this.anims.generateFrameNames('texture', {
+                start: 0,
+                end: 32,
+                prefix: 'doors/up/door-up-',
+                suffix: '.png'
+            }),
+            frameRate: 4,
+            repeat: 0
+        });
+        door.anims.play('door-up-open');
+        this.physics.add.collider(door, this.player, () => {
+            this.scene.start(this.nextLevel);
+        }, null, this);
     }
 
     create() {
-        const deltaY = this.game.config.height - 16 * 32;
+        this.deltaY = this.game.config.height - 16 * 32;
 
         //'map' è definita in caricamento con load.tilemapTiledJSON
         this.map = this.make.tilemap({ key: this.mapName });
@@ -39,8 +55,8 @@ class Level extends Phaser.Scene {
         //'tiled' è definito come tileset in Tiled. 
         //'base' è definito come tileset in Tiled. 
         //'rocks' è definito come tileset in Tiled. 
-        this.baseLayer = this.map.createStaticLayer("base", "tiled", 0, deltaY);
-        this.rockLayer = this.map.createStaticLayer("rocks", "tiled", 0, deltaY);
+        this.baseLayer = this.map.createDynamicLayer("base", "tiled", 0, this.deltaY);
+        this.rockLayer = this.map.createStaticLayer("rocks", "tiled", 0, this.deltaY);
         //collisioni con proprietà definite in Tiled
         this.baseLayer.setCollisionByProperty({ collides: true });
         this.rockLayer.setCollisionByProperty({ collides: true });
@@ -56,16 +72,16 @@ class Level extends Phaser.Scene {
             let enemyType = object.properties.filter(prop => prop.name == "enemyType")[0].value;
             switch (enemyType) {
                 case "red-slime":
-                    this.enemies.add(new RedSlime(this, object.x, object.y + deltaY));
+                    this.enemies.add(new RedSlime(this, object.x, object.y + this.deltaY));
                     break;
                 case "blue-slime":
-                    this.enemies.add(new BlueSlime(this, object.x, object.y + deltaY));
+                    this.enemies.add(new BlueSlime(this, object.x, object.y + this.deltaY));
                     break;
                 case "green-slime":
-                    this.enemies.add(new GreenSlime(this, object.x, object.y + deltaY, this.player));
+                    this.enemies.add(new GreenSlime(this, object.x, object.y + this.deltaY, this.player));
                     break;
                 case "worm":
-                    this.enemies.add(new Worm(this, object.x, object.y + deltaY));
+                    this.enemies.add(new Worm(this, object.x, object.y + this.deltaY));
                     break;
 
             }
@@ -90,9 +106,9 @@ class Level extends Phaser.Scene {
         this.physics.add.collider(this.bullets, this.baseLayer, this.bulletCollide, null, this);
         this.physics.add.collider(this.bullets, this.rockLayer, this.bulletCollide, null, this);
 
-
+        //player colpito da nemici
         this.physics.add.collider(this.enemies, this.player, (player, enemy) => {
-            player.handleDamage(enemy);
+            //  player.handleDamage(enemy);            
         }, null);
 
         //nemici colpiti da proiettile
@@ -167,7 +183,7 @@ class Level extends Phaser.Scene {
 
     update(time, update) {
 
-        
+
 
         if (this.playing) {
             this.player.move({
