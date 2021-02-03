@@ -29,7 +29,6 @@ risoluzione 800*600
 - aggiungere suoni
 - aggiungere musica
 - schermata delle opzioni
-- schermata iniziale
 - rendere l'applicazione eseguile su desktop Windows
 - mostrare energia dei nemici
 - più livelli (progettati con Tiled) in ordine casuale
@@ -43,3 +42,4 @@ risoluzione 800*600
 - animazione porte
 - su cellulare si vede male
 - pubblicare gioco online
+- possibilità di cambiare SKIN al personaggio

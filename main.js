@@ -8,8 +8,11 @@ class Main extends Phaser.Scene {
 
     create() {
         this.add.image(this.game.config.width / 2, this.game.config.height / 2, "texture", "sfondinojpg.jpg");
-        this.tastoGioca = this.add.sprite(this.game.config.width / 2, this.game.config.height / 2, "texture", "tasto-gioca.png").setInteractive();
+        this.tastoGioca = this.add.sprite(this.game.config.width / 2, this.game.config.height / 2 - 100, "texture", "tasto-gioca.png").setInteractive();
 
+        this.add.sprite(this.game.config.width / 2, this.game.config.height / 2 , "texture", "tasto-impostazioni.png");
+        this.add.sprite(this.game.config.width / 2, this.game.config.height / 2 + 100, "texture", "tasto-collezione.png");
+        
 
         this.tastoGioca.on("pointerover", () => {
             this.tastoGioca.setTint(0xff0000);
