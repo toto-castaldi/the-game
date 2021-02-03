@@ -108,7 +108,7 @@ class Level extends Phaser.Scene {
 
         //player colpito da nemici
         this.physics.add.collider(this.enemies, this.player, (player, enemy) => {
-            //  player.handleDamage(enemy);            
+            player.handleDamage(enemy);            
         }, null);
 
         //nemici colpiti da proiettile

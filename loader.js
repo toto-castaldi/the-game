@@ -4,8 +4,6 @@ class Loader extends Phaser.Scene {
         super({
             key: "Loader"
         })
-
-        this.playing = true;
     }
 
     preload() {
@@ -20,6 +18,6 @@ class Loader extends Phaser.Scene {
     }
 
     create() {
-        this.scene.start('Level00');   
+        this.scene.start('Main');   
     }
 }

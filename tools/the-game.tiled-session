@@ -16,7 +16,7 @@
         },
         "/home/toto/scm-projects/the-game/assets/level-00.json": {
             "scale": 0.9666250000000001,
-            "selectedLayer": 0,
+            "selectedLayer": 2,
             "viewCenter": {
                 "x": 388.46502004396734,
                 "y": 257.59731022888917
@@ -29,7 +29,7 @@
             "scale": 0.9666250000000001,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 411.22462175093756,
+                "x": 412.25914910125437,
                 "y": 257.59731022888917
             }
         },
@@ -77,11 +77,13 @@
     "map.lastUsedFormat": "json",
     "map.width": 25,
     "openFiles": [
-        "/home/toto/scm-projects/the-game/assets/level-00.json"
+        "/home/toto/scm-projects/the-game/assets/level-00.json",
+        "/home/toto/scm-projects/the-game/assets/level-01.json"
     ],
     "project": "the-game.tiled-project",
     "property.type": "string",
     "recentFiles": [
+        "/home/toto/scm-projects/the-game/assets/level-01.json",
         "/home/toto/scm-projects/the-game/assets/level-00.json",
         "level-00.json",
         "tiled.tsx",
